@@ -1,0 +1,333 @@
+2024-04-30 01:42:59,347 INFO o.s.b.StartupInfoLogger [main] Starting UserMngServiceApplication using Java 17.0.10 with PID 29968 (/home/prince03102020/projects/26042024/UserMngService/target/classes started by prince03102020 in /home/prince03102020/projects/26042024/UserMngService)
+2024-04-30 01:42:59,355 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-04-30 01:42:59,874 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2024-04-30 01:42:59,876 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-04-30 01:42:59,964 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 78 ms. Found 1 Redis repository interface.
+2024-04-30 01:43:00,311 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 9889 (http)
+2024-04-30 01:43:00,320 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-9889"]
+2024-04-30 01:43:00,321 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2024-04-30 01:43:00,322 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-30 01:43:00,363 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2024-04-30 01:43:00,365 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 975 ms
+2024-04-30 01:43:00,540 INFO c.a.U.c.s.ApplicationConfiguration [main] Inside userDetailsService
+2024-04-30 01:43:00,708 INFO c.a.U.c.s.ApplicationConfiguration [main] Inside authenticationProvider
+2024-04-30 01:43:00,720 INFO c.a.U.c.s.ApplicationConfiguration [main] Inside passwordEncoder
+2024-04-30 01:43:00,726 INFO c.a.U.s.KafkaPublisher [main] Inside createKafkaProducer
+2024-04-30 01:43:00,740 INFO o.a.k.c.c.AbstractConfig [main] ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2024-04-30 01:43:00,755 INFO o.a.k.c.p.KafkaProducer [main] [Producer clientId=producer-1] Instantiated an idempotent producer.
+2024-04-30 01:43:00,789 INFO o.a.k.c.u.AppInfoParser$AppInfo [main] Kafka version: 3.6.2
+2024-04-30 01:43:00,789 INFO o.a.k.c.u.AppInfoParser$AppInfo [main] Kafka commitId: c4deed513057c94e
+2024-04-30 01:43:00,789 INFO o.a.k.c.u.AppInfoParser$AppInfo [main] Kafka startTimeMs: 1714421580786
+2024-04-30 01:43:00,796 INFO c.a.U.c.s.ApplicationConfiguration [main] Inside authenticationManager
+2024-04-30 01:43:01,000 INFO c.a.U.c.s.SecurityConfiguration [main] Inside securityFilterChain
+2024-04-30 01:43:01,021 INFO o.s.s.w.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@498e41a4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@be616f0, org.springframework.security.web.context.SecurityContextHolderFilter@6906be0f, org.springframework.security.web.header.HeaderWriterFilter@4345fd45, org.springframework.security.web.authentication.logout.LogoutFilter@4fc3529, com.apica.UserMngService.config.security.JwtAuthenticationFilter@1a536164, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@edbc2bf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3e01796a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1f5d7fd5, org.springframework.security.web.session.SessionManagementFilter@25e6c22a, org.springframework.security.web.access.ExceptionTranslationFilter@10a0a1e, org.springframework.security.web.access.intercept.AuthorizationFilter@35ceec81]
+2024-04-30 01:43:01,035 INFO c.a.U.c.s.SecurityConfiguration [main] Inside corsConfigurationSource
+2024-04-30 01:43:01,080 INFO o.a.k.c.Metadata [kafka-producer-network-thread | producer-1] [Producer clientId=producer-1] Cluster ID: Gg902wkCTxiAnE84y-_jFw
+2024-04-30 01:43:01,081 INFO o.a.k.c.p.i.TransactionManager [kafka-producer-network-thread | producer-1] [Producer clientId=producer-1] ProducerId set to 51 with epoch 0
+2024-04-30 01:43:01,282 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-9889"]
+2024-04-30 01:43:01,293 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 9889 (http) with context path ''
+2024-04-30 01:43:01,302 INFO o.s.b.StartupInfoLogger [main] Started UserMngServiceApplication in 2.254 seconds (process running for 2.734)
+2024-04-30 01:43:01,304 INFO c.a.U.UserMngServiceApplication [main] Exiting main
+2024-04-30 01:43:19,253 INFO o.a.j.l.DirectJDKLog [http-nio-9889-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-30 01:43:19,254 INFO o.s.w.s.FrameworkServlet [http-nio-9889-exec-2] Initializing Servlet 'dispatcherServlet'
+2024-04-30 01:43:19,257 INFO o.s.w.s.FrameworkServlet [http-nio-9889-exec-2] Completed initialization in 3 ms
+2024-04-30 01:43:19,271 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-2] Inside doFilterInternal
+2024-04-30 01:43:19,339 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-2] Entering register
+2024-04-30 01:43:19,339 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-2] Entering createUser with data:User(uId=d25ef846-17ec-4199-a655-00000, usrName=john_doe_20, password=pawan123, email=john_3@example.com, address=789 Main St, createdAt=null, updatedAt=null)
+2024-04-30 01:43:19,411 INFO c.a.U.s.KafkaPublisher [http-nio-9889-exec-2] Id:d25ef846-17ec-4199-a655-00000 Entering publishJournalEntry
+2024-04-30 01:43:19,438 INFO c.a.U.s.KafkaPublisher [http-nio-9889-exec-2] Id:d25ef846-17ec-4199-a655-00000 Exiting publishJournalEntry
+2024-04-30 01:43:19,534 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-2] Id:d25ef846-17ec-4199-a655-00000 Exiting createUser
+2024-04-30 01:43:19,552 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-2] Exiting register
+2024-04-30 01:43:34,246 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-3] Inside doFilterInternal
+2024-04-30 01:43:34,247 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-3] Entering authenticate
+2024-04-30 01:43:34,248 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-3] Inside authenticate with LoginUserDto:LoginUserDto(uId=d25ef846-17ec-4199-a655-10000, password=pawan123)
+2024-04-30 01:43:44,475 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-4] Inside doFilterInternal
+2024-04-30 01:43:44,477 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-4] Entering authenticate
+2024-04-30 01:43:44,477 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-4] Inside authenticate with LoginUserDto:LoginUserDto(uId=d25ef846-17ec-4199-a655-00000, password=pawan123)
+2024-04-30 01:43:44,561 INFO c.a.U.s.JwtService [http-nio-9889-exec-4] Inside generateToken-1Arg with UserDetails:User(uId=d25ef846-17ec-4199-a655-00000, usrName=john_doe_20, password=$2a$10$vIXhrJhYtUvMoa7Kj37yaecKK/N8UEgSw.GsOydqWWenTOiKNY8hS, email=john_3@example.com, address=789 Main St, createdAt=Tue Apr 30 01:43:19 IST 2024, updatedAt=Tue Apr 30 01:43:19 IST 2024)
+2024-04-30 01:43:44,561 INFO c.a.U.s.JwtService [http-nio-9889-exec-4] Inside generateToken-2Arg with UserDetails:User(uId=d25ef846-17ec-4199-a655-00000, usrName=john_doe_20, password=$2a$10$vIXhrJhYtUvMoa7Kj37yaecKK/N8UEgSw.GsOydqWWenTOiKNY8hS, email=john_3@example.com, address=789 Main St, createdAt=Tue Apr 30 01:43:19 IST 2024, updatedAt=Tue Apr 30 01:43:19 IST 2024)
+2024-04-30 01:43:44,562 INFO c.a.U.s.JwtService [http-nio-9889-exec-4] Inside buildToken
+2024-04-30 01:43:44,567 INFO c.a.U.s.JwtService [http-nio-9889-exec-4] Inside getSignInKey
+2024-04-30 01:43:44,577 INFO c.a.U.s.JwtService [http-nio-9889-exec-4] Inside getExpirationTime
+2024-04-30 01:43:44,578 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-4] Exiting authenticate
+2024-04-30 01:44:00,960 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-5] Inside doFilterInternal
+2024-04-30 01:44:00,960 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Inside extractUsername with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkMjVlZjg0Ni0xN2VjLTQxOTktYTY1NS0wMDAwMCIsImlhdCI6MTcxNDQyMTYyNCwiZXhwIjoxNzE0NDI1MjI0fQ.N-PFZ588ZbCi3eUV5rlWjwxIWJcqaSLdmlWxJbu-pdA
+2024-04-30 01:44:00,961 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkMjVlZjg0Ni0xN2VjLTQxOTktYTY1NS0wMDAwMCIsImlhdCI6MTcxNDQyMTYyNCwiZXhwIjoxNzE0NDI1MjI0fQ.N-PFZ588ZbCi3eUV5rlWjwxIWJcqaSLdmlWxJbu-pdA claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1659/0x00007f4b6480caa0@6299f856
+2024-04-30 01:44:00,961 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Inside extractAllClaims
+2024-04-30 01:44:00,963 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Inside getSignInKey
+2024-04-30 01:44:00,972 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Exiting extractUsername with extractedData:d25ef846-17ec-4199-a655-00000
+2024-04-30 01:44:00,973 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-5] userId:d25ef846-17ec-4199-a655-00000 jwt:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkMjVlZjg0Ni0xN2VjLTQxOTktYTY1NS0wMDAwMCIsImlhdCI6MTcxNDQyMTYyNCwiZXhwIjoxNzE0NDI1MjI0fQ.N-PFZ588ZbCi3eUV5rlWjwxIWJcqaSLdmlWxJbu-pdA
+2024-04-30 01:44:00,973 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-5] Authentication data:null
+2024-04-30 01:44:00,973 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-5] Entered userId != null && authentication == null
+2024-04-30 01:44:00,974 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-5] userDetails fetched internally:User(uId=d25ef846-17ec-4199-a655-00000, usrName=john_doe_20, password=$2a$10$vIXhrJhYtUvMoa7Kj37yaecKK/N8UEgSw.GsOydqWWenTOiKNY8hS, email=john_3@example.com, address=789 Main St, createdAt=Tue Apr 30 01:43:19 IST 2024, updatedAt=Tue Apr 30 01:43:19 IST 2024)
+2024-04-30 01:44:00,975 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Inside isTokenValid with UserDetails:User(uId=d25ef846-17ec-4199-a655-00000, usrName=john_doe_20, password=$2a$10$vIXhrJhYtUvMoa7Kj37yaecKK/N8UEgSw.GsOydqWWenTOiKNY8hS, email=john_3@example.com, address=789 Main St, createdAt=Tue Apr 30 01:43:19 IST 2024, updatedAt=Tue Apr 30 01:43:19 IST 2024)
+2024-04-30 01:44:00,975 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Inside extractUsername with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkMjVlZjg0Ni0xN2VjLTQxOTktYTY1NS0wMDAwMCIsImlhdCI6MTcxNDQyMTYyNCwiZXhwIjoxNzE0NDI1MjI0fQ.N-PFZ588ZbCi3eUV5rlWjwxIWJcqaSLdmlWxJbu-pdA
+2024-04-30 01:44:00,975 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkMjVlZjg0Ni0xN2VjLTQxOTktYTY1NS0wMDAwMCIsImlhdCI6MTcxNDQyMTYyNCwiZXhwIjoxNzE0NDI1MjI0fQ.N-PFZ588ZbCi3eUV5rlWjwxIWJcqaSLdmlWxJbu-pdA claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1659/0x00007f4b6480caa0@6299f856
+2024-04-30 01:44:00,975 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Inside extractAllClaims
+2024-04-30 01:44:00,976 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Inside getSignInKey
+2024-04-30 01:44:00,977 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Exiting extractUsername with extractedData:d25ef846-17ec-4199-a655-00000
+2024-04-30 01:44:00,977 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Inside isTokenExpired
+2024-04-30 01:44:00,978 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Inside extractExpiration
+2024-04-30 01:44:00,978 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkMjVlZjg0Ni0xN2VjLTQxOTktYTY1NS0wMDAwMCIsImlhdCI6MTcxNDQyMTYyNCwiZXhwIjoxNzE0NDI1MjI0fQ.N-PFZ588ZbCi3eUV5rlWjwxIWJcqaSLdmlWxJbu-pdA claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1660/0x00007f4b64814278@347e2f2
+2024-04-30 01:44:00,978 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Inside extractAllClaims
+2024-04-30 01:44:00,978 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Inside getSignInKey
+2024-04-30 01:44:00,980 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Expected username:d25ef846-17ec-4199-a655-00000 IsTokenExpired:false
+2024-04-30 01:44:00,980 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Inside isTokenExpired
+2024-04-30 01:44:00,980 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Inside extractExpiration
+2024-04-30 01:44:00,980 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkMjVlZjg0Ni0xN2VjLTQxOTktYTY1NS0wMDAwMCIsImlhdCI6MTcxNDQyMTYyNCwiZXhwIjoxNzE0NDI1MjI0fQ.N-PFZ588ZbCi3eUV5rlWjwxIWJcqaSLdmlWxJbu-pdA claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1660/0x00007f4b64814278@347e2f2
+2024-04-30 01:44:00,980 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Inside extractAllClaims
+2024-04-30 01:44:00,980 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Inside getSignInKey
+2024-04-30 01:44:00,984 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-5] Inside getUserById
+2024-04-30 01:44:00,984 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-5] Id:d25ef846-17ec-4199-a655-10004 Entering getUser
+2024-04-30 01:44:00,985 INFO c.a.U.s.KafkaPublisher [http-nio-9889-exec-5] Id:d25ef846-17ec-4199-a655-10004 Entering publishJournalEntry
+2024-04-30 01:44:00,985 INFO c.a.U.s.KafkaPublisher [http-nio-9889-exec-5] Id:d25ef846-17ec-4199-a655-10004 Exiting publishJournalEntry
+2024-04-30 01:44:00,987 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-5] Id:d25ef846-17ec-4199-a655-10004 Exiting getUser
+2024-04-30 01:44:09,612 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-6] Inside doFilterInternal
+2024-04-30 01:44:09,613 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside extractUsername with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkMjVlZjg0Ni0xN2VjLTQxOTktYTY1NS0wMDAwMCIsImlhdCI6MTcxNDQyMTYyNCwiZXhwIjoxNzE0NDI1MjI0fQ.N-PFZ588ZbCi3eUV5rlWjwxIWJcqaSLdmlWxJbu-pdA
+2024-04-30 01:44:09,613 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkMjVlZjg0Ni0xN2VjLTQxOTktYTY1NS0wMDAwMCIsImlhdCI6MTcxNDQyMTYyNCwiZXhwIjoxNzE0NDI1MjI0fQ.N-PFZ588ZbCi3eUV5rlWjwxIWJcqaSLdmlWxJbu-pdA claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1659/0x00007f4b6480caa0@6299f856
+2024-04-30 01:44:09,613 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside extractAllClaims
+2024-04-30 01:44:09,614 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside getSignInKey
+2024-04-30 01:44:09,616 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Exiting extractUsername with extractedData:d25ef846-17ec-4199-a655-00000
+2024-04-30 01:44:09,616 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-6] userId:d25ef846-17ec-4199-a655-00000 jwt:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkMjVlZjg0Ni0xN2VjLTQxOTktYTY1NS0wMDAwMCIsImlhdCI6MTcxNDQyMTYyNCwiZXhwIjoxNzE0NDI1MjI0fQ.N-PFZ588ZbCi3eUV5rlWjwxIWJcqaSLdmlWxJbu-pdA
+2024-04-30 01:44:09,616 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-6] Authentication data:null
+2024-04-30 01:44:09,617 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-6] Entered userId != null && authentication == null
+2024-04-30 01:44:09,618 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-6] userDetails fetched internally:User(uId=d25ef846-17ec-4199-a655-00000, usrName=john_doe_20, password=$2a$10$vIXhrJhYtUvMoa7Kj37yaecKK/N8UEgSw.GsOydqWWenTOiKNY8hS, email=john_3@example.com, address=789 Main St, createdAt=Tue Apr 30 01:43:19 IST 2024, updatedAt=Tue Apr 30 01:43:19 IST 2024)
+2024-04-30 01:44:09,619 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside isTokenValid with UserDetails:User(uId=d25ef846-17ec-4199-a655-00000, usrName=john_doe_20, password=$2a$10$vIXhrJhYtUvMoa7Kj37yaecKK/N8UEgSw.GsOydqWWenTOiKNY8hS, email=john_3@example.com, address=789 Main St, createdAt=Tue Apr 30 01:43:19 IST 2024, updatedAt=Tue Apr 30 01:43:19 IST 2024)
+2024-04-30 01:44:09,619 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside extractUsername with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkMjVlZjg0Ni0xN2VjLTQxOTktYTY1NS0wMDAwMCIsImlhdCI6MTcxNDQyMTYyNCwiZXhwIjoxNzE0NDI1MjI0fQ.N-PFZ588ZbCi3eUV5rlWjwxIWJcqaSLdmlWxJbu-pdA
+2024-04-30 01:44:09,619 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkMjVlZjg0Ni0xN2VjLTQxOTktYTY1NS0wMDAwMCIsImlhdCI6MTcxNDQyMTYyNCwiZXhwIjoxNzE0NDI1MjI0fQ.N-PFZ588ZbCi3eUV5rlWjwxIWJcqaSLdmlWxJbu-pdA claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1659/0x00007f4b6480caa0@6299f856
+2024-04-30 01:44:09,619 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside extractAllClaims
+2024-04-30 01:44:09,619 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside getSignInKey
+2024-04-30 01:44:09,620 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Exiting extractUsername with extractedData:d25ef846-17ec-4199-a655-00000
+2024-04-30 01:44:09,620 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside isTokenExpired
+2024-04-30 01:44:09,620 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside extractExpiration
+2024-04-30 01:44:09,620 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkMjVlZjg0Ni0xN2VjLTQxOTktYTY1NS0wMDAwMCIsImlhdCI6MTcxNDQyMTYyNCwiZXhwIjoxNzE0NDI1MjI0fQ.N-PFZ588ZbCi3eUV5rlWjwxIWJcqaSLdmlWxJbu-pdA claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1660/0x00007f4b64814278@347e2f2
+2024-04-30 01:44:09,621 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside extractAllClaims
+2024-04-30 01:44:09,621 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside getSignInKey
+2024-04-30 01:44:09,621 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Expected username:d25ef846-17ec-4199-a655-00000 IsTokenExpired:false
+2024-04-30 01:44:09,622 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside isTokenExpired
+2024-04-30 01:44:09,622 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside extractExpiration
+2024-04-30 01:44:09,622 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkMjVlZjg0Ni0xN2VjLTQxOTktYTY1NS0wMDAwMCIsImlhdCI6MTcxNDQyMTYyNCwiZXhwIjoxNzE0NDI1MjI0fQ.N-PFZ588ZbCi3eUV5rlWjwxIWJcqaSLdmlWxJbu-pdA claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1660/0x00007f4b64814278@347e2f2
+2024-04-30 01:44:09,622 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside extractAllClaims
+2024-04-30 01:44:09,622 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside getSignInKey
+2024-04-30 01:44:09,624 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-6] Inside getUserById
+2024-04-30 01:44:09,624 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-6] Id:d25ef846-17ec-4199-a655-00000 Entering getUser
+2024-04-30 01:44:09,624 INFO c.a.U.s.KafkaPublisher [http-nio-9889-exec-6] Id:d25ef846-17ec-4199-a655-00000 Entering publishJournalEntry
+2024-04-30 01:44:09,625 INFO c.a.U.s.KafkaPublisher [http-nio-9889-exec-6] Id:d25ef846-17ec-4199-a655-00000 Exiting publishJournalEntry
+2024-04-30 01:44:09,627 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-6] Id:d25ef846-17ec-4199-a655-00000 Exiting getUser
+2024-04-30 01:44:18,631 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-7] Inside doFilterInternal
+2024-04-30 01:44:18,632 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-7] Entering register
+2024-04-30 01:44:18,632 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-7] Entering createUser with data:User(uId=d25ef846-17ec-4199-a655-00001, usrName=john_doe_20, password=pawan123, email=john_3@example.com, address=789 Main St, createdAt=null, updatedAt=null)
+2024-04-30 01:44:18,633 INFO c.a.U.s.KafkaPublisher [http-nio-9889-exec-7] Id:d25ef846-17ec-4199-a655-00001 Entering publishJournalEntry
+2024-04-30 01:44:18,634 INFO c.a.U.s.KafkaPublisher [http-nio-9889-exec-7] Id:d25ef846-17ec-4199-a655-00001 Exiting publishJournalEntry
+2024-04-30 01:44:18,732 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-7] Id:d25ef846-17ec-4199-a655-00001 Exiting createUser
+2024-04-30 01:44:18,735 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-7] Exiting register
+2024-04-30 01:44:27,216 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-8] Inside doFilterInternal
+2024-04-30 01:44:27,217 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-8] Entering authenticate
+2024-04-30 01:44:27,217 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-8] Inside authenticate with LoginUserDto:LoginUserDto(uId=d25ef846-17ec-4199-a655-00001, password=pawan123)
+2024-04-30 01:44:27,301 INFO c.a.U.s.JwtService [http-nio-9889-exec-8] Inside generateToken-1Arg with UserDetails:User(uId=d25ef846-17ec-4199-a655-00001, usrName=john_doe_20, password=$2a$10$ejEY9S2r7suYsbceoS.W7OQ3eew.XBmN6EibE.uM7vhDgCoWKsZ5., email=john_3@example.com, address=789 Main St, createdAt=Tue Apr 30 01:44:18 IST 2024, updatedAt=Tue Apr 30 01:44:18 IST 2024)
+2024-04-30 01:44:27,301 INFO c.a.U.s.JwtService [http-nio-9889-exec-8] Inside generateToken-2Arg with UserDetails:User(uId=d25ef846-17ec-4199-a655-00001, usrName=john_doe_20, password=$2a$10$ejEY9S2r7suYsbceoS.W7OQ3eew.XBmN6EibE.uM7vhDgCoWKsZ5., email=john_3@example.com, address=789 Main St, createdAt=Tue Apr 30 01:44:18 IST 2024, updatedAt=Tue Apr 30 01:44:18 IST 2024)
+2024-04-30 01:44:27,301 INFO c.a.U.s.JwtService [http-nio-9889-exec-8] Inside buildToken
+2024-04-30 01:44:27,301 INFO c.a.U.s.JwtService [http-nio-9889-exec-8] Inside getSignInKey
+2024-04-30 01:44:27,304 INFO c.a.U.s.JwtService [http-nio-9889-exec-8] Inside getExpirationTime
+2024-04-30 01:44:27,305 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-8] Exiting authenticate
+2024-04-30 01:44:29,607 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-9] Inside doFilterInternal
+2024-04-30 01:44:29,609 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-9] Entering authenticate
+2024-04-30 01:44:29,609 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-9] Inside authenticate with LoginUserDto:LoginUserDto(uId=d25ef846-17ec-4199-a655-00001, password=pawan123)
+2024-04-30 01:44:29,693 INFO c.a.U.s.JwtService [http-nio-9889-exec-9] Inside generateToken-1Arg with UserDetails:User(uId=d25ef846-17ec-4199-a655-00001, usrName=john_doe_20, password=$2a$10$ejEY9S2r7suYsbceoS.W7OQ3eew.XBmN6EibE.uM7vhDgCoWKsZ5., email=john_3@example.com, address=789 Main St, createdAt=Tue Apr 30 01:44:18 IST 2024, updatedAt=Tue Apr 30 01:44:18 IST 2024)
+2024-04-30 01:44:29,693 INFO c.a.U.s.JwtService [http-nio-9889-exec-9] Inside generateToken-2Arg with UserDetails:User(uId=d25ef846-17ec-4199-a655-00001, usrName=john_doe_20, password=$2a$10$ejEY9S2r7suYsbceoS.W7OQ3eew.XBmN6EibE.uM7vhDgCoWKsZ5., email=john_3@example.com, address=789 Main St, createdAt=Tue Apr 30 01:44:18 IST 2024, updatedAt=Tue Apr 30 01:44:18 IST 2024)
+2024-04-30 01:44:29,693 INFO c.a.U.s.JwtService [http-nio-9889-exec-9] Inside buildToken
+2024-04-30 01:44:29,694 INFO c.a.U.s.JwtService [http-nio-9889-exec-9] Inside getSignInKey
+2024-04-30 01:44:29,695 INFO c.a.U.s.JwtService [http-nio-9889-exec-9] Inside getExpirationTime
+2024-04-30 01:44:29,695 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-9] Exiting authenticate
+2024-04-30 01:44:38,481 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-10] Inside doFilterInternal
+2024-04-30 01:44:38,483 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-10] Entering register
+2024-04-30 01:44:38,483 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-10] Entering createUser with data:User(uId=d25ef846-17ec-4199-a655-00002, usrName=john_doe_20, password=pawan123, email=john_3@example.com, address=789 Main St, createdAt=null, updatedAt=null)
+2024-04-30 01:44:38,484 INFO c.a.U.s.KafkaPublisher [http-nio-9889-exec-10] Id:d25ef846-17ec-4199-a655-00002 Entering publishJournalEntry
+2024-04-30 01:44:38,485 INFO c.a.U.s.KafkaPublisher [http-nio-9889-exec-10] Id:d25ef846-17ec-4199-a655-00002 Exiting publishJournalEntry
+2024-04-30 01:44:38,568 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-10] Id:d25ef846-17ec-4199-a655-00002 Exiting createUser
+2024-04-30 01:44:38,569 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-10] Exiting register
+2024-04-30 01:44:43,506 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-1] Inside doFilterInternal
+2024-04-30 01:44:43,507 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Inside extractUsername with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkMjVlZjg0Ni0xN2VjLTQxOTktYTY1NS0wMDAwMCIsImlhdCI6MTcxNDQyMTYyNCwiZXhwIjoxNzE0NDI1MjI0fQ.N-PFZ588ZbCi3eUV5rlWjwxIWJcqaSLdmlWxJbu-pdA
+2024-04-30 01:44:43,507 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkMjVlZjg0Ni0xN2VjLTQxOTktYTY1NS0wMDAwMCIsImlhdCI6MTcxNDQyMTYyNCwiZXhwIjoxNzE0NDI1MjI0fQ.N-PFZ588ZbCi3eUV5rlWjwxIWJcqaSLdmlWxJbu-pdA claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1659/0x00007f4b6480caa0@6299f856
+2024-04-30 01:44:43,507 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Inside extractAllClaims
+2024-04-30 01:44:43,507 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Inside getSignInKey
+2024-04-30 01:44:43,508 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Exiting extractUsername with extractedData:d25ef846-17ec-4199-a655-00000
+2024-04-30 01:44:43,509 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-1] userId:d25ef846-17ec-4199-a655-00000 jwt:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkMjVlZjg0Ni0xN2VjLTQxOTktYTY1NS0wMDAwMCIsImlhdCI6MTcxNDQyMTYyNCwiZXhwIjoxNzE0NDI1MjI0fQ.N-PFZ588ZbCi3eUV5rlWjwxIWJcqaSLdmlWxJbu-pdA
+2024-04-30 01:44:43,509 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-1] Authentication data:null
+2024-04-30 01:44:43,510 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-1] Entered userId != null && authentication == null
+2024-04-30 01:44:43,511 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-1] userDetails fetched internally:User(uId=d25ef846-17ec-4199-a655-00000, usrName=john_doe_20, password=$2a$10$vIXhrJhYtUvMoa7Kj37yaecKK/N8UEgSw.GsOydqWWenTOiKNY8hS, email=john_3@example.com, address=789 Main St, createdAt=Tue Apr 30 01:43:19 IST 2024, updatedAt=Tue Apr 30 01:43:19 IST 2024)
+2024-04-30 01:44:43,512 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Inside isTokenValid with UserDetails:User(uId=d25ef846-17ec-4199-a655-00000, usrName=john_doe_20, password=$2a$10$vIXhrJhYtUvMoa7Kj37yaecKK/N8UEgSw.GsOydqWWenTOiKNY8hS, email=john_3@example.com, address=789 Main St, createdAt=Tue Apr 30 01:43:19 IST 2024, updatedAt=Tue Apr 30 01:43:19 IST 2024)
+2024-04-30 01:44:43,512 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Inside extractUsername with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkMjVlZjg0Ni0xN2VjLTQxOTktYTY1NS0wMDAwMCIsImlhdCI6MTcxNDQyMTYyNCwiZXhwIjoxNzE0NDI1MjI0fQ.N-PFZ588ZbCi3eUV5rlWjwxIWJcqaSLdmlWxJbu-pdA
+2024-04-30 01:44:43,512 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkMjVlZjg0Ni0xN2VjLTQxOTktYTY1NS0wMDAwMCIsImlhdCI6MTcxNDQyMTYyNCwiZXhwIjoxNzE0NDI1MjI0fQ.N-PFZ588ZbCi3eUV5rlWjwxIWJcqaSLdmlWxJbu-pdA claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1659/0x00007f4b6480caa0@6299f856
+2024-04-30 01:44:43,512 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Inside extractAllClaims
+2024-04-30 01:44:43,513 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Inside getSignInKey
+2024-04-30 01:44:43,514 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Exiting extractUsername with extractedData:d25ef846-17ec-4199-a655-00000
+2024-04-30 01:44:43,514 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Inside isTokenExpired
+2024-04-30 01:44:43,514 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Inside extractExpiration
+2024-04-30 01:44:43,514 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkMjVlZjg0Ni0xN2VjLTQxOTktYTY1NS0wMDAwMCIsImlhdCI6MTcxNDQyMTYyNCwiZXhwIjoxNzE0NDI1MjI0fQ.N-PFZ588ZbCi3eUV5rlWjwxIWJcqaSLdmlWxJbu-pdA claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1660/0x00007f4b64814278@347e2f2
+2024-04-30 01:44:43,514 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Inside extractAllClaims
+2024-04-30 01:44:43,514 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Inside getSignInKey
+2024-04-30 01:44:43,516 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Expected username:d25ef846-17ec-4199-a655-00000 IsTokenExpired:false
+2024-04-30 01:44:43,516 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Inside isTokenExpired
+2024-04-30 01:44:43,516 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Inside extractExpiration
+2024-04-30 01:44:43,516 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkMjVlZjg0Ni0xN2VjLTQxOTktYTY1NS0wMDAwMCIsImlhdCI6MTcxNDQyMTYyNCwiZXhwIjoxNzE0NDI1MjI0fQ.N-PFZ588ZbCi3eUV5rlWjwxIWJcqaSLdmlWxJbu-pdA claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1660/0x00007f4b64814278@347e2f2
+2024-04-30 01:44:43,516 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Inside extractAllClaims
+2024-04-30 01:44:43,516 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Inside getSignInKey
+2024-04-30 01:44:43,518 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-1] Inside getUserById
+2024-04-30 01:44:43,519 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-1] Id:d25ef846-17ec-4199-a655-00000 Entering getUser
+2024-04-30 01:44:43,519 INFO c.a.U.s.KafkaPublisher [http-nio-9889-exec-1] Id:d25ef846-17ec-4199-a655-00000 Entering publishJournalEntry
+2024-04-30 01:44:43,519 INFO c.a.U.s.KafkaPublisher [http-nio-9889-exec-1] Id:d25ef846-17ec-4199-a655-00000 Exiting publishJournalEntry
+2024-04-30 01:44:43,522 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-1] Id:d25ef846-17ec-4199-a655-00000 Exiting getUser
+2024-04-30 01:44:51,975 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-2] Inside doFilterInternal
+2024-04-30 01:44:51,976 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside extractUsername with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkMjVlZjg0Ni0xN2VjLTQxOTktYTY1NS0wMDAwMCIsImlhdCI6MTcxNDQyMTYyNCwiZXhwIjoxNzE0NDI1MjI0fQ.N-PFZ588ZbCi3eUV5rlWjwxIWJcqaSLdmlWxJbu-pdA
+2024-04-30 01:44:51,976 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkMjVlZjg0Ni0xN2VjLTQxOTktYTY1NS0wMDAwMCIsImlhdCI6MTcxNDQyMTYyNCwiZXhwIjoxNzE0NDI1MjI0fQ.N-PFZ588ZbCi3eUV5rlWjwxIWJcqaSLdmlWxJbu-pdA claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1659/0x00007f4b6480caa0@6299f856
+2024-04-30 01:44:51,976 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside extractAllClaims
+2024-04-30 01:44:51,977 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside getSignInKey
+2024-04-30 01:44:51,978 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Exiting extractUsername with extractedData:d25ef846-17ec-4199-a655-00000
+2024-04-30 01:44:51,979 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-2] userId:d25ef846-17ec-4199-a655-00000 jwt:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkMjVlZjg0Ni0xN2VjLTQxOTktYTY1NS0wMDAwMCIsImlhdCI6MTcxNDQyMTYyNCwiZXhwIjoxNzE0NDI1MjI0fQ.N-PFZ588ZbCi3eUV5rlWjwxIWJcqaSLdmlWxJbu-pdA
+2024-04-30 01:44:51,979 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-2] Authentication data:null
+2024-04-30 01:44:51,979 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-2] Entered userId != null && authentication == null
+2024-04-30 01:44:51,980 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-2] userDetails fetched internally:User(uId=d25ef846-17ec-4199-a655-00000, usrName=john_doe_20, password=$2a$10$vIXhrJhYtUvMoa7Kj37yaecKK/N8UEgSw.GsOydqWWenTOiKNY8hS, email=john_3@example.com, address=789 Main St, createdAt=Tue Apr 30 01:43:19 IST 2024, updatedAt=Tue Apr 30 01:43:19 IST 2024)
+2024-04-30 01:44:51,980 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside isTokenValid with UserDetails:User(uId=d25ef846-17ec-4199-a655-00000, usrName=john_doe_20, password=$2a$10$vIXhrJhYtUvMoa7Kj37yaecKK/N8UEgSw.GsOydqWWenTOiKNY8hS, email=john_3@example.com, address=789 Main St, createdAt=Tue Apr 30 01:43:19 IST 2024, updatedAt=Tue Apr 30 01:43:19 IST 2024)
+2024-04-30 01:44:51,980 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside extractUsername with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkMjVlZjg0Ni0xN2VjLTQxOTktYTY1NS0wMDAwMCIsImlhdCI6MTcxNDQyMTYyNCwiZXhwIjoxNzE0NDI1MjI0fQ.N-PFZ588ZbCi3eUV5rlWjwxIWJcqaSLdmlWxJbu-pdA
+2024-04-30 01:44:51,980 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkMjVlZjg0Ni0xN2VjLTQxOTktYTY1NS0wMDAwMCIsImlhdCI6MTcxNDQyMTYyNCwiZXhwIjoxNzE0NDI1MjI0fQ.N-PFZ588ZbCi3eUV5rlWjwxIWJcqaSLdmlWxJbu-pdA claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1659/0x00007f4b6480caa0@6299f856
+2024-04-30 01:44:51,981 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside extractAllClaims
+2024-04-30 01:44:51,981 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside getSignInKey
+2024-04-30 01:44:51,982 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Exiting extractUsername with extractedData:d25ef846-17ec-4199-a655-00000
+2024-04-30 01:44:51,982 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside isTokenExpired
+2024-04-30 01:44:51,983 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside extractExpiration
+2024-04-30 01:44:51,983 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkMjVlZjg0Ni0xN2VjLTQxOTktYTY1NS0wMDAwMCIsImlhdCI6MTcxNDQyMTYyNCwiZXhwIjoxNzE0NDI1MjI0fQ.N-PFZ588ZbCi3eUV5rlWjwxIWJcqaSLdmlWxJbu-pdA claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1660/0x00007f4b64814278@347e2f2
+2024-04-30 01:44:51,983 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside extractAllClaims
+2024-04-30 01:44:51,983 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside getSignInKey
+2024-04-30 01:44:51,983 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Expected username:d25ef846-17ec-4199-a655-00000 IsTokenExpired:false
+2024-04-30 01:44:51,983 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside isTokenExpired
+2024-04-30 01:44:51,983 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside extractExpiration
+2024-04-30 01:44:51,983 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkMjVlZjg0Ni0xN2VjLTQxOTktYTY1NS0wMDAwMCIsImlhdCI6MTcxNDQyMTYyNCwiZXhwIjoxNzE0NDI1MjI0fQ.N-PFZ588ZbCi3eUV5rlWjwxIWJcqaSLdmlWxJbu-pdA claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1660/0x00007f4b64814278@347e2f2
+2024-04-30 01:44:51,983 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside extractAllClaims
+2024-04-30 01:44:51,984 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside getSignInKey
+2024-04-30 01:44:51,986 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-2] Inside getAllUsers
+2024-04-30 01:44:51,986 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-2] Entering getAllUsers
+2024-04-30 01:44:51,986 INFO c.a.U.s.KafkaPublisher [http-nio-9889-exec-2] Id:O6EJOEReQ0K1gr1GZNl9LA Entering publishJournalEntry
+2024-04-30 01:44:51,987 INFO c.a.U.s.KafkaPublisher [http-nio-9889-exec-2] Id:O6EJOEReQ0K1gr1GZNl9LA Exiting publishJournalEntry
+2024-04-30 01:44:52,005 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-2] Exiting getAllUsers
+2024-04-30 01:45:22,087 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-3] Inside doFilterInternal
+2024-04-30 01:45:22,087 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Inside extractUsername with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkMjVlZjg0Ni0xN2VjLTQxOTktYTY1NS0wMDAwMSIsImlhdCI6MTcxNDQyMTY2OSwiZXhwIjoxNzE0NDI1MjY5fQ.fledACSZLOOiYp8pVmUfDvQBpqpG_QTFyBnbEvjazAE
+2024-04-30 01:45:22,087 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkMjVlZjg0Ni0xN2VjLTQxOTktYTY1NS0wMDAwMSIsImlhdCI6MTcxNDQyMTY2OSwiZXhwIjoxNzE0NDI1MjY5fQ.fledACSZLOOiYp8pVmUfDvQBpqpG_QTFyBnbEvjazAE claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1659/0x00007f4b6480caa0@6299f856
+2024-04-30 01:45:22,088 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Inside extractAllClaims
+2024-04-30 01:45:22,088 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Inside getSignInKey
+2024-04-30 01:45:22,089 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Exiting extractUsername with extractedData:d25ef846-17ec-4199-a655-00001
+2024-04-30 01:45:22,089 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-3] userId:d25ef846-17ec-4199-a655-00001 jwt:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkMjVlZjg0Ni0xN2VjLTQxOTktYTY1NS0wMDAwMSIsImlhdCI6MTcxNDQyMTY2OSwiZXhwIjoxNzE0NDI1MjY5fQ.fledACSZLOOiYp8pVmUfDvQBpqpG_QTFyBnbEvjazAE
+2024-04-30 01:45:22,089 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-3] Authentication data:null
+2024-04-30 01:45:22,090 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-3] Entered userId != null && authentication == null
+2024-04-30 01:45:22,091 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-3] userDetails fetched internally:User(uId=d25ef846-17ec-4199-a655-00001, usrName=john_doe_20, password=$2a$10$ejEY9S2r7suYsbceoS.W7OQ3eew.XBmN6EibE.uM7vhDgCoWKsZ5., email=john_3@example.com, address=789 Main St, createdAt=Tue Apr 30 01:44:18 IST 2024, updatedAt=Tue Apr 30 01:44:18 IST 2024)
+2024-04-30 01:45:22,091 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Inside isTokenValid with UserDetails:User(uId=d25ef846-17ec-4199-a655-00001, usrName=john_doe_20, password=$2a$10$ejEY9S2r7suYsbceoS.W7OQ3eew.XBmN6EibE.uM7vhDgCoWKsZ5., email=john_3@example.com, address=789 Main St, createdAt=Tue Apr 30 01:44:18 IST 2024, updatedAt=Tue Apr 30 01:44:18 IST 2024)
+2024-04-30 01:45:22,091 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Inside extractUsername with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkMjVlZjg0Ni0xN2VjLTQxOTktYTY1NS0wMDAwMSIsImlhdCI6MTcxNDQyMTY2OSwiZXhwIjoxNzE0NDI1MjY5fQ.fledACSZLOOiYp8pVmUfDvQBpqpG_QTFyBnbEvjazAE
+2024-04-30 01:45:22,091 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkMjVlZjg0Ni0xN2VjLTQxOTktYTY1NS0wMDAwMSIsImlhdCI6MTcxNDQyMTY2OSwiZXhwIjoxNzE0NDI1MjY5fQ.fledACSZLOOiYp8pVmUfDvQBpqpG_QTFyBnbEvjazAE claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1659/0x00007f4b6480caa0@6299f856
+2024-04-30 01:45:22,092 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Inside extractAllClaims
+2024-04-30 01:45:22,092 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Inside getSignInKey
+2024-04-30 01:45:22,092 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Exiting extractUsername with extractedData:d25ef846-17ec-4199-a655-00001
+2024-04-30 01:45:22,092 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Inside isTokenExpired
+2024-04-30 01:45:22,092 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Inside extractExpiration
+2024-04-30 01:45:22,093 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkMjVlZjg0Ni0xN2VjLTQxOTktYTY1NS0wMDAwMSIsImlhdCI6MTcxNDQyMTY2OSwiZXhwIjoxNzE0NDI1MjY5fQ.fledACSZLOOiYp8pVmUfDvQBpqpG_QTFyBnbEvjazAE claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1660/0x00007f4b64814278@347e2f2
+2024-04-30 01:45:22,093 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Inside extractAllClaims
+2024-04-30 01:45:22,093 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Inside getSignInKey
+2024-04-30 01:45:22,093 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Expected username:d25ef846-17ec-4199-a655-00001 IsTokenExpired:false
+2024-04-30 01:45:22,093 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Inside isTokenExpired
+2024-04-30 01:45:22,093 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Inside extractExpiration
+2024-04-30 01:45:22,093 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkMjVlZjg0Ni0xN2VjLTQxOTktYTY1NS0wMDAwMSIsImlhdCI6MTcxNDQyMTY2OSwiZXhwIjoxNzE0NDI1MjY5fQ.fledACSZLOOiYp8pVmUfDvQBpqpG_QTFyBnbEvjazAE claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1660/0x00007f4b64814278@347e2f2
+2024-04-30 01:45:22,093 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Inside extractAllClaims
+2024-04-30 01:45:22,094 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Inside getSignInKey
+2024-04-30 01:45:22,094 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-3] Inside getAllUsers
+2024-04-30 01:45:22,095 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-3] Entering getAllUsers
+2024-04-30 01:45:22,095 INFO c.a.U.s.KafkaPublisher [http-nio-9889-exec-3] Id:4cAkiW6PQKCQlzdq4j6iEg Entering publishJournalEntry
+2024-04-30 01:45:22,095 INFO c.a.U.s.KafkaPublisher [http-nio-9889-exec-3] Id:4cAkiW6PQKCQlzdq4j6iEg Exiting publishJournalEntry
+2024-04-30 01:45:22,097 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-3] Exiting getAllUsers

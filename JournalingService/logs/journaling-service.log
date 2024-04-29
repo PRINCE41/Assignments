@@ -1,0 +1,57 @@
+2024-04-30 00:31:16,267 INFO o.a.k.c.NetworkClient [main] [Consumer clientId=consumer-journal-group-1, groupId=journal-group] Disconnecting from node 0 due to request timeout.
+2024-04-30 00:31:16,595 INFO o.a.k.c.NetworkClient [main] [Consumer clientId=consumer-journal-group-1, groupId=journal-group] Cancelled in-flight FETCH request with correlation id 26670 due to node 0 being disconnected (elapsed time since creation: 2027892ms, elapsed time since send: 2027892ms, request timeout: 30000ms)
+2024-04-30 00:31:16,596 INFO o.a.k.c.c.i.AbstractCoordinator [kafka-coordinator-heartbeat-thread | journal-group] [Consumer clientId=consumer-journal-group-1, groupId=journal-group] Group coordinator Prince03102020.:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-04-30 00:31:16,596 INFO o.a.k.c.FetchSessionHandler [main] [Consumer clientId=consumer-journal-group-1, groupId=journal-group] Error sending fetch request (sessionId=1268513161, epoch=8) to node 0:
+org.apache.kafka.common.errors.DisconnectException: null
+2024-04-30 00:31:16,597 INFO o.a.k.c.c.i.AbstractCoordinator [kafka-coordinator-heartbeat-thread | journal-group] [Consumer clientId=consumer-journal-group-1, groupId=journal-group] Requesting disconnect from last known coordinator Prince03102020.:9092 (id: 2147483647 rack: null)
+2024-04-30 00:31:16,597 INFO o.a.k.c.NetworkClient [kafka-coordinator-heartbeat-thread | journal-group] [Consumer clientId=consumer-journal-group-1, groupId=journal-group] Client requested disconnect from node 2147483647
+2024-04-30 00:31:16,603 INFO o.a.k.c.c.i.AbstractCoordinator$FindCoordinatorResponseHandler [main] [Consumer clientId=consumer-journal-group-1, groupId=journal-group] Discovered group coordinator Prince03102020.:9092 (id: 2147483647 rack: null)
+2024-04-30 00:31:16,605 INFO o.a.k.c.c.i.AbstractCoordinator [main] [Consumer clientId=consumer-journal-group-1, groupId=journal-group] Group coordinator Prince03102020.:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-04-30 00:31:16,605 INFO o.a.k.c.c.i.AbstractCoordinator [main] [Consumer clientId=consumer-journal-group-1, groupId=journal-group] Requesting disconnect from last known coordinator Prince03102020.:9092 (id: 2147483647 rack: null)
+2024-04-30 00:31:17,204 INFO o.a.k.c.c.i.AbstractCoordinator$FindCoordinatorResponseHandler [main] [Consumer clientId=consumer-journal-group-1, groupId=journal-group] Discovered group coordinator Prince03102020.:9092 (id: 2147483647 rack: null)
+2024-04-30 00:31:17,521 INFO o.a.k.c.c.i.AbstractCoordinator$FindCoordinatorResponseHandler [main] [Consumer clientId=consumer-journal-group-1, groupId=journal-group] Discovered group coordinator Prince03102020.:9092 (id: 2147483647 rack: null)
+2024-04-30 00:31:17,522 INFO o.a.k.c.c.i.AbstractCoordinator$FindCoordinatorResponseHandler [main] [Consumer clientId=consumer-journal-group-1, groupId=journal-group] Discovered group coordinator Prince03102020.:9092 (id: 2147483647 rack: null)
+2024-04-30 00:31:17,523 INFO o.a.k.c.c.i.AbstractCoordinator$FindCoordinatorResponseHandler [main] [Consumer clientId=consumer-journal-group-1, groupId=journal-group] Discovered group coordinator Prince03102020.:9092 (id: 2147483647 rack: null)
+2024-04-30 01:21:44,804 INFO o.a.k.c.NetworkClient [main] [Consumer clientId=consumer-journal-group-1, groupId=journal-group] Disconnecting from node 0 due to request timeout.
+2024-04-30 01:21:44,805 INFO o.a.k.c.NetworkClient [main] [Consumer clientId=consumer-journal-group-1, groupId=journal-group] Cancelled in-flight FETCH request with correlation id 26690 due to node 0 being disconnected (elapsed time since creation: 3023770ms, elapsed time since send: 3023770ms, request timeout: 30000ms)
+2024-04-30 01:21:44,806 INFO o.a.k.c.c.i.AbstractCoordinator [kafka-coordinator-heartbeat-thread | journal-group] [Consumer clientId=consumer-journal-group-1, groupId=journal-group] Group coordinator Prince03102020.:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-04-30 01:21:44,805 INFO o.a.k.c.FetchSessionHandler [main] [Consumer clientId=consumer-journal-group-1, groupId=journal-group] Error sending fetch request (sessionId=990803133, epoch=8) to node 0:
+org.apache.kafka.common.errors.DisconnectException: null
+2024-04-30 01:21:44,806 INFO o.a.k.c.c.i.AbstractCoordinator [kafka-coordinator-heartbeat-thread | journal-group] [Consumer clientId=consumer-journal-group-1, groupId=journal-group] Requesting disconnect from last known coordinator Prince03102020.:9092 (id: 2147483647 rack: null)
+2024-04-30 01:21:44,806 INFO o.a.k.c.NetworkClient [kafka-coordinator-heartbeat-thread | journal-group] [Consumer clientId=consumer-journal-group-1, groupId=journal-group] Client requested disconnect from node 2147483647
+2024-04-30 01:21:45,651 INFO o.a.k.c.c.i.AbstractCoordinator$FindCoordinatorResponseHandler [main] [Consumer clientId=consumer-journal-group-1, groupId=journal-group] Discovered group coordinator Prince03102020.:9092 (id: 2147483647 rack: null)
+2024-04-30 01:21:45,655 INFO o.a.k.c.c.i.AbstractCoordinator$FindCoordinatorResponseHandler [main] [Consumer clientId=consumer-journal-group-1, groupId=journal-group] Discovered group coordinator Prince03102020.:9092 (id: 2147483647 rack: null)
+2024-04-30 01:21:45,655 INFO o.a.k.c.c.i.AbstractCoordinator$FindCoordinatorResponseHandler [main] [Consumer clientId=consumer-journal-group-1, groupId=journal-group] Discovered group coordinator Prince03102020.:9092 (id: 2147483647 rack: null)
+2024-04-30 01:21:45,656 INFO o.a.k.c.c.i.AbstractCoordinator$FindCoordinatorResponseHandler [main] [Consumer clientId=consumer-journal-group-1, groupId=journal-group] Discovered group coordinator Prince03102020.:9092 (id: 2147483647 rack: null)
+2024-04-30 01:21:45,656 INFO o.a.k.c.c.i.AbstractCoordinator$FindCoordinatorResponseHandler [main] [Consumer clientId=consumer-journal-group-1, groupId=journal-group] Discovered group coordinator Prince03102020.:9092 (id: 2147483647 rack: null)
+2024-04-30 01:21:45,657 INFO o.a.k.c.c.i.AbstractCoordinator$FindCoordinatorResponseHandler [main] [Consumer clientId=consumer-journal-group-1, groupId=journal-group] Discovered group coordinator Prince03102020.:9092 (id: 2147483647 rack: null)
+2024-04-30 01:28:26,529 INFO c.a.J.s.KafkaConsumerService [main] Received data:JournalEntry(userId=d25ef846-17ec-4199-a655-10008, action=User Registration, timestamp=Tue Apr 30 01:28:26 IST 2024) in processJournalEntry
+2024-04-30 01:28:26,539 INFO c.a.J.s.KafkaConsumerService [main] Exiting processJournalEntry
+2024-04-30 01:34:14,809 INFO c.a.J.s.KafkaConsumerService [main] Received data:JournalEntry(userId=a1m1bcefQwefH8Z9SUUIdw, action=API Get All User Request, timestamp=Tue Apr 30 01:34:14 IST 2024) in processJournalEntry
+2024-04-30 01:34:14,817 INFO c.a.J.s.KafkaConsumerService [main] Exiting processJournalEntry
+2024-04-30 01:34:41,635 INFO c.a.J.s.KafkaConsumerService [main] Received data:JournalEntry(userId=s, action=API Get User Request, timestamp=Tue Apr 30 01:34:41 IST 2024) in processJournalEntry
+2024-04-30 01:34:41,641 INFO c.a.J.s.KafkaConsumerService [main] Exiting processJournalEntry
+2024-04-30 01:34:50,604 INFO c.a.J.s.KafkaConsumerService [main] Received data:JournalEntry(userId=qTbehViVQg6klJUj_wblWA, action=API Get All User Request, timestamp=Tue Apr 30 01:34:50 IST 2024) in processJournalEntry
+2024-04-30 01:34:50,605 INFO c.a.J.s.KafkaConsumerService [main] Exiting processJournalEntry
+2024-04-30 01:39:28,462 INFO c.a.J.s.KafkaConsumerService [main] Received data:JournalEntry(userId=2UupDCijR7yd59r1lSKuow, action=API Get All User Request, timestamp=Tue Apr 30 01:39:28 IST 2024) in processJournalEntry
+2024-04-30 01:39:28,469 INFO c.a.J.s.KafkaConsumerService [main] Exiting processJournalEntry
+2024-04-30 01:40:06,325 INFO c.a.J.s.KafkaConsumerService [main] Received data:JournalEntry(userId=o47FbPkcScmytgwbeYVXYQ, action=API Get All User Request, timestamp=Tue Apr 30 01:40:06 IST 2024) in processJournalEntry
+2024-04-30 01:40:06,330 INFO c.a.J.s.KafkaConsumerService [main] Exiting processJournalEntry
+2024-04-30 01:40:44,058 INFO c.a.J.s.KafkaConsumerService [main] Received data:JournalEntry(userId=d25ef846-17ec-4199-a655-10004, action=API Get User Request, timestamp=Tue Apr 30 01:40:44 IST 2024) in processJournalEntry
+2024-04-30 01:40:44,061 INFO c.a.J.s.KafkaConsumerService [main] Exiting processJournalEntry
+2024-04-30 01:43:19,473 INFO c.a.J.s.KafkaConsumerService [main] Received data:JournalEntry(userId=d25ef846-17ec-4199-a655-00000, action=User Registration, timestamp=Tue Apr 30 01:43:19 IST 2024) in processJournalEntry
+2024-04-30 01:43:19,481 INFO c.a.J.s.KafkaConsumerService [main] Exiting processJournalEntry
+2024-04-30 01:44:00,997 INFO c.a.J.s.KafkaConsumerService [main] Received data:JournalEntry(userId=d25ef846-17ec-4199-a655-10004, action=API Get User Request, timestamp=Tue Apr 30 01:44:00 IST 2024) in processJournalEntry
+2024-04-30 01:44:01,004 INFO c.a.J.s.KafkaConsumerService [main] Exiting processJournalEntry
+2024-04-30 01:44:09,629 INFO c.a.J.s.KafkaConsumerService [main] Received data:JournalEntry(userId=d25ef846-17ec-4199-a655-00000, action=API Get User Request, timestamp=Tue Apr 30 01:44:09 IST 2024) in processJournalEntry
+2024-04-30 01:44:09,631 INFO c.a.J.s.KafkaConsumerService [main] Exiting processJournalEntry
+2024-04-30 01:44:18,637 INFO c.a.J.s.KafkaConsumerService [main] Received data:JournalEntry(userId=d25ef846-17ec-4199-a655-00001, action=User Registration, timestamp=Tue Apr 30 01:44:18 IST 2024) in processJournalEntry
+2024-04-30 01:44:18,639 INFO c.a.J.s.KafkaConsumerService [main] Exiting processJournalEntry
+2024-04-30 01:44:38,488 INFO c.a.J.s.KafkaConsumerService [main] Received data:JournalEntry(userId=d25ef846-17ec-4199-a655-00002, action=User Registration, timestamp=Tue Apr 30 01:44:38 IST 2024) in processJournalEntry
+2024-04-30 01:44:38,490 INFO c.a.J.s.KafkaConsumerService [main] Exiting processJournalEntry
+2024-04-30 01:44:43,523 INFO c.a.J.s.KafkaConsumerService [main] Received data:JournalEntry(userId=d25ef846-17ec-4199-a655-00000, action=API Get User Request, timestamp=Tue Apr 30 01:44:43 IST 2024) in processJournalEntry
+2024-04-30 01:44:43,524 INFO c.a.J.s.KafkaConsumerService [main] Exiting processJournalEntry
+2024-04-30 01:44:51,990 INFO c.a.J.s.KafkaConsumerService [main] Received data:JournalEntry(userId=O6EJOEReQ0K1gr1GZNl9LA, action=API Get All User Request, timestamp=Tue Apr 30 01:44:51 IST 2024) in processJournalEntry
+2024-04-30 01:44:51,997 INFO c.a.J.s.KafkaConsumerService [main] Exiting processJournalEntry
+2024-04-30 01:45:22,102 INFO c.a.J.s.KafkaConsumerService [main] Received data:JournalEntry(userId=4cAkiW6PQKCQlzdq4j6iEg, action=API Get All User Request, timestamp=Tue Apr 30 01:45:22 IST 2024) in processJournalEntry
+2024-04-30 01:45:22,105 INFO c.a.J.s.KafkaConsumerService [main] Exiting processJournalEntry

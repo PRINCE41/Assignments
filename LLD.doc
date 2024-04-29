@@ -1,0 +1,59 @@
+UsrMngrService
+Components:
+Controller: Exposes REST endpoints for user management operations.
+Service: Implements business logic for user management.
+Repository: Interacts with the database for CRUD operations on user entities.
+Model: Defines the User entity.
+Class Diagram:
+
++-------------------+            +-------------------+
+|   UsrMngrController  | ---------> |  UsrMngrService    |
++-------------------+            +-------------------+
+|   - userService       |            |   - userRepository   |
++-------------------+            +-------------------+
+            |                                        |
+            |                                        |
+            |   +------------------------------------+
+            +---|    UserModel                 |
+                +------------------------------------+
+Save to grepper
+Responsibilities:
+UsrMngrController:
+Handles HTTP requests related to user management.
+Calls appropriate methods in UsrMngrService.
+UsrMngrService:
+Contains business logic for user management.
+Coordinates with UsrMngrRepository for CRUD operations.
+UsrMngrRepository:
+Performs CRUD operations on the database for user entities.
+UserModel:
+Represents the structure of the User entity.
+JournalingService
+Components:
+Publisher: Publishes journal entries to Kafka topic.
+Constants: Defines constants for journal actions.
+Service: Implements business logic related to journaling.
+Repository: Provides interface for interacting with the database for journal entries.
+Class Diagram:
+
++-------------------+           +-------------------+
+|   JournalingService  | --------> |   KafkaPublisher   |
++-------------------+           +-------------------+
+|   - journalRepository |          |   - publishJournalEntry() |
++-------------------+           +-------------------+
+            |                                     |
+            |                                     |
+            |   +---------------------------------+
+            +---|   Constants                      |
+                +---------------------------------+
+
+Responsibilities:
+JournalingService:
+Contains business logic for journaling actions.
+Coordinates with KafkaPublisher to publish journal entries.
+KafkaPublisher:
+Publishes journal entries to Kafka topic.
+Constants:
+Stores constant values related to journal actions.
+JournalRepository:
+Interface for performing database operations on journal entries.
