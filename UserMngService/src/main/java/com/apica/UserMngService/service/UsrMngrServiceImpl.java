@@ -11,10 +11,15 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+
+import com.apica.UserMngService.dao.RoleRepository;
 import com.apica.UserMngService.dao.UserRepository;
 import com.apica.UserMngService.dtos.LoginUserDto;
+import com.apica.UserMngService.model.Role;
 import com.apica.UserMngService.model.User;
 import com.apica.UserMngService.util.CommonConsts;
+import com.apica.UserMngService.util.RoleEnum;
+
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -23,6 +28,7 @@ import lombok.extern.slf4j.Slf4j;
 public class UsrMngrServiceImpl implements UsrMngrService {
     
     private final UserRepository userRepository;
+    private final RoleRepository roleRepository;
     private final KafkaPublisher kafkaPublisher;
     private final PasswordEncoder passwordEncoder;
     private final AuthenticationManager authenticationManager;
@@ -31,12 +37,14 @@ public class UsrMngrServiceImpl implements UsrMngrService {
         UserRepository userRepository,
         KafkaPublisher kafkaPublisher,
         PasswordEncoder passwordEncoder,
-        AuthenticationManager authenticationManager
+        AuthenticationManager authenticationManager,
+        RoleRepository roleRepository
     ) {
         this.authenticationManager = authenticationManager;
         this.kafkaPublisher = kafkaPublisher;
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
+        this.roleRepository = roleRepository;
     }
     
     @Override
@@ -54,6 +62,10 @@ public class UsrMngrServiceImpl implements UsrMngrService {
     @Override
     public User createUser(User user) {
         log.info("Entering createUser with data:{}", user);
+        Optional<Role> optionalRole = roleRepository.findByName(RoleEnum.USER);
+        if (optionalRole.isEmpty()) {
+            return null;
+        }
         if(user != null){
             if (user.getUId() == null) {
                 String id = UUID.randomUUID().toString();
@@ -68,6 +80,7 @@ public class UsrMngrServiceImpl implements UsrMngrService {
                 }
                 kafkaPublisher.publishJournalEntry(user.getUId(), CommonConsts.REGISTRATION_ACTION);
             }
+            user.setRole(optionalRole.get());
             user.setPassword(passwordEncoder.encode(user.getPassword()));
             user.setCreatedAt(new Date());
             user.setUpdatedAt(new Date());
@@ -142,4 +155,5 @@ public class UsrMngrServiceImpl implements UsrMngrService {
         return userRepository.findById(input.getUId())
                 .orElseThrow();
     }
+
 }

@@ -11,7 +11,7 @@ import org.springframework.data.annotation.Id;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@RedisHash("Journals")
+@RedisHash("journals")
 public class JournalEntry {
     @Id
     private String userId;

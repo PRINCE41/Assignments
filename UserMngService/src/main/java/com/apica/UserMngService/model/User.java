@@ -9,11 +9,15 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.redis.core.RedisHash;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 
 
 @Data
-@RedisHash("User")
+@RedisHash("users")
 public class User implements UserDetails{
 
     @Id
@@ -26,6 +30,11 @@ public class User implements UserDetails{
     @Column(unique = true, length = 100, nullable = false)
     private String email;
     private String address;
+
+    @OneToOne(cascade = CascadeType.REMOVE)
+    @JoinColumn(name = "role_id", referencedColumnName = "id", nullable = false)
+    private Role role;
+
     private Date createdAt;
     private Date updatedAt;
 

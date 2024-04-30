@@ -1,1 +1,2 @@
 # 26042024
+https://blog.tericcabrel.com/jwt-authentication-springboot-spring-security/
