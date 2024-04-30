@@ -9,15 +9,15 @@ import com.apica.UserMngService.model.User;
 @Service
 public interface UsrMngrService {
     
-    User getUser(String id);
+    public User getUser(String id);
     
-    User createUser(User user);
+    public User createUser(User user);
     
-    User updateUser(String id, User user);
+    public User updateUser(String id, User user);
     
-    void deleteUser(String id);
+    public void deleteUser(String id);
     
-    List<User> getAllUsers();
+    public List<User> getAllUsers();
 
     public User authenticate(LoginUserDto input);
 }
