@@ -1,0 +1,9 @@
+com/apica/JournalingService/util/CommonConsts.class
+com/apica/JournalingService/service/KafkaConsumerService.class
+com/apica/JournalingService/model/JournalEntry.class
+com/apica/JournalingService/config/CommonProp.class
+com/apica/JournalingService/config/CommonProp$KafkaProp.class
+com/apica/JournalingService/config/SecurityConfig.class
+com/apica/JournalingService/config/RedisConfig.class
+com/apica/JournalingService/config/CommonProp$RedisProp.class
+com/apica/JournalingService/JournalingServiceApplication.class

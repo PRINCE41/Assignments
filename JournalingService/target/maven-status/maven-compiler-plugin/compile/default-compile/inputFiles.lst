@@ -1,0 +1,9 @@
+/home/prince03102020/projects/26042024/JournalingService/src/main/java/com/apica/JournalingService/model/JournalEntry.java
+/home/prince03102020/projects/26042024/JournalingService/src/main/java/com/apica/JournalingService/JournalingServiceApplication.java
+/home/prince03102020/projects/26042024/JournalingService/src/main/java/com/apica/JournalingService/dao/JournalRepository.java
+/home/prince03102020/projects/26042024/JournalingService/src/main/java/com/apica/JournalingService/config/CommonProp.java
+/home/prince03102020/projects/26042024/JournalingService/src/main/java/com/apica/JournalingService/config/SecurityConfig.java
+/home/prince03102020/projects/26042024/JournalingService/src/main/java/com/apica/JournalingService/controller/JournalController.java
+/home/prince03102020/projects/26042024/JournalingService/src/main/java/com/apica/JournalingService/service/KafkaConsumerService.java
+/home/prince03102020/projects/26042024/JournalingService/src/main/java/com/apica/JournalingService/util/CommonConsts.java
+/home/prince03102020/projects/26042024/JournalingService/src/main/java/com/apica/JournalingService/config/RedisConfig.java
