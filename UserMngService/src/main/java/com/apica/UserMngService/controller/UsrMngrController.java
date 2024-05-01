@@ -11,6 +11,8 @@ import com.apica.UserMngService.model.LoginResponse;
 import com.apica.UserMngService.model.User;
 import com.apica.UserMngService.service.JwtService;
 import com.apica.UserMngService.service.UsrMngrService;
+import com.apica.UserMngService.util.DataNotFoundException;
+
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -30,7 +32,11 @@ public class UsrMngrController {
     @GetMapping("/{id}")
     public ResponseEntity<User> getUserById(@PathVariable String id) {
         log.info("Inside getUserById");
-        return ResponseEntity.ok(usrMngrService.getUser(id));
+        var userData = usrMngrService.getUser(id);
+        if (userData == null) {
+            throw new DataNotFoundException("Unable to get user with Id:{}" + id);
+        }
+        return ResponseEntity.ok(userData);
     }
 
     @GetMapping("/currentUser")
@@ -48,7 +54,11 @@ public class UsrMngrController {
     @PutMapping("/{id}")
     public ResponseEntity<User> updateUser(@PathVariable String id, @RequestBody User user) {
         log.info("Inside updateUser");
-        return ResponseEntity.ok(usrMngrService.updateUser(id, user));
+        var updtUser = usrMngrService.updateUser(id, user);
+        if (updtUser == null) {
+            throw new DataNotFoundException("Unable to update");
+        }
+        return ResponseEntity.ok(updtUser);
     }
 
     @DeleteMapping("/{id}")
@@ -67,9 +77,11 @@ public class UsrMngrController {
 
     @PostMapping("/signup")
     public ResponseEntity<User> register(@RequestBody User user) {
-        log.info("Entering register");
+        log.info("Inside register");
         User registeredUser = usrMngrService.createUser(user);
-        log.info("Exiting register");
+        if (registeredUser == null) {
+            throw new DataNotFoundException("Unable to register");
+        }
         return ResponseEntity.ok(registeredUser);
     }
 

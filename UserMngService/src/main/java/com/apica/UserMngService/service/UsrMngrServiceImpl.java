@@ -62,8 +62,9 @@ public class UsrMngrServiceImpl implements UsrMngrService {
     @Override
     public User createUser(User user) {
         log.info("Entering createUser with data:{}", user);
-        Optional<Role> optionalRole = roleRepository.findByName(RoleEnum.USER);
+        Optional<Role> optionalRole = roleRepository.findById(RoleEnum.USER.getId());
         if (optionalRole.isEmpty()) {
+            log.warn("Unknown user-role found:{}", user);
             return null;
         }
         if(user != null){

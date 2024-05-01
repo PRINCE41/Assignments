@@ -8,7 +8,7 @@ import java.util.Date;
 import org.springframework.data.redis.core.RedisHash;
 
 @Data
-@RedisHash("roles")
+@RedisHash("role")
 public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

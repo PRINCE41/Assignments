@@ -17,7 +17,7 @@ import jakarta.persistence.OneToOne;
 
 
 @Data
-@RedisHash("users")
+@RedisHash("user")
 public class User implements UserDetails{
 
     @Id
