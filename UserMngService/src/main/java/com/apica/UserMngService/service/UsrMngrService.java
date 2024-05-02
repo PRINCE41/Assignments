@@ -19,5 +19,8 @@ public interface UsrMngrService {
     
     public List<User> getAllUsers();
 
+    public User createAdministrator(User input);
+
     public User authenticate(LoginUserDto input);
+
 }

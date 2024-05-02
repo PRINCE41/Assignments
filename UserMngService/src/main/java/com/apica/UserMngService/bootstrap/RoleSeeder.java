@@ -1,5 +1,6 @@
 package com.apica.UserMngService.bootstrap;
 
+import org.apache.logging.log4j.core.config.Order;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
@@ -12,6 +13,7 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.*;
 
 @Slf4j
+@Order(1)
 @Component
 public class RoleSeeder implements ApplicationListener<ContextRefreshedEvent> {
     

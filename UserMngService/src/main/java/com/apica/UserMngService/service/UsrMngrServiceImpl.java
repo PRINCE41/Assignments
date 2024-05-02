@@ -11,7 +11,6 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-
 import com.apica.UserMngService.dao.RoleRepository;
 import com.apica.UserMngService.dao.UserRepository;
 import com.apica.UserMngService.dtos.LoginUserDto;
@@ -19,7 +18,6 @@ import com.apica.UserMngService.model.Role;
 import com.apica.UserMngService.model.User;
 import com.apica.UserMngService.util.CommonConsts;
 import com.apica.UserMngService.util.RoleEnum;
-
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -141,6 +139,24 @@ public class UsrMngrServiceImpl implements UsrMngrService {
         userRepository.findAll().forEach(users::add);
         log.info("Exiting getAllUsers");
         return users;
+    }
+
+
+    @Override
+    public User createAdministrator(User input) {
+        Optional<Role> optionalRole = roleRepository.findById(RoleEnum.ADMIN.getId());
+        if (optionalRole.isEmpty()) {
+            return null;
+        }
+        var user = new User();
+        user.setUsrName(input.getUsername());
+        user.setEmail(input.getEmail());
+        user.setPassword(passwordEncoder.encode(input.getPassword()));
+        user.setRole(optionalRole.get());
+        user.setAddress(input.getAddress());
+        user.setCreatedAt(new Date());
+        user.setUpdatedAt(new Date());
+        return userRepository.save(user);
     }
 
     @Override
