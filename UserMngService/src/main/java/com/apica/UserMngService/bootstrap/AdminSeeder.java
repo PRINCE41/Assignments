@@ -5,7 +5,6 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
-
 import com.apica.UserMngService.dao.RoleRepository;
 import com.apica.UserMngService.dao.UserRepository;
 import com.apica.UserMngService.model.Role;
@@ -41,16 +40,15 @@ public class AdminSeeder implements ApplicationListener<ContextRefreshedEvent> {
 
     private void createSuperAdministrator() {
         User user = new User();
-        user.setUsrName("Super Admin");
+        user.setUserName("super-admin");
         user.setEmail("super.admin@email.com");
-        user.setUId("super-user-123456");
         user.setAddress("128, Officer Colony, LMP");
         user.setCreatedAt(new Date());
         user.setUpdatedAt(new Date());
         
 
         Optional<Role> optionalRole = roleRepository.findById(RoleEnum.SUPER_ADMIN.getId());
-        Optional<User> optionalUser = userRepository.findById(user.getUId());
+        Optional<User> optionalUser = userRepository.findById(user.getUsername());
 
         if (optionalRole.isEmpty()) {
             log.warn("Unable to fetch SUPER_ADMIN Role data");

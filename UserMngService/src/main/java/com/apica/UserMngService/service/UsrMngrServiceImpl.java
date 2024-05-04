@@ -66,24 +66,24 @@ public class UsrMngrServiceImpl implements UsrMngrService {
             return null;
         }
         if(user != null){
-            if (user.getUId() == null) {
+            if (user.getUsername() == null) {
                 String id = UUID.randomUUID().toString();
-                user.setUId(id);
+                user.setUserName(id);
                 kafkaPublisher.publishJournalEntry(id, CommonConsts.REGISTRATION_ACTION);
             }
             else {
-                Optional<User> optionalUser = userRepository.findById(user.getUId());
+                Optional<User> optionalUser = userRepository.findById(user.getUsername());
                 if (optionalUser.isPresent()) {
-                    log.warn("Id:{} User already exist", user.getUId());
+                    log.warn("Id:{} User already exist", user.getUsername());
                     return null;
                 }
-                kafkaPublisher.publishJournalEntry(user.getUId(), CommonConsts.REGISTRATION_ACTION);
+                kafkaPublisher.publishJournalEntry(user.getUsername(), CommonConsts.REGISTRATION_ACTION);
             }
             user.setRole(optionalRole.get());
             user.setPassword(passwordEncoder.encode(user.getPassword()));
             user.setCreatedAt(new Date());
             user.setUpdatedAt(new Date());
-            log.info("Id:{} Exiting createUser", user.getUId());
+            log.info("Id:{} Exiting createUser", user.getUsername());
             return userRepository.save(user);
         }
         log.warn("Invalid data:{} provided in request. Exiting createUser", user);
@@ -149,7 +149,7 @@ public class UsrMngrServiceImpl implements UsrMngrService {
             return null;
         }
         var user = new User();
-        user.setUsrName(input.getUsername());
+        user.setUserName(input.getUsername());
         user.setEmail(input.getEmail());
         user.setPassword(passwordEncoder.encode(input.getPassword()));
         user.setRole(optionalRole.get());
@@ -161,16 +161,16 @@ public class UsrMngrServiceImpl implements UsrMngrService {
 
     @Override
     public User authenticate(LoginUserDto input) {
-        log.info("Inside authenticate with LoginUserDto:{}", input);
+        log.info("Entering authenticate with LoginUserDto:{}", input);
         authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(
-                        input.getUId(),
-                        input.getPassword()
-                )
+                    new UsernamePasswordAuthenticationToken(
+                            input.getUserName(),
+                            input.getPassword()
+                    )
         );
-
-        return userRepository.findById(input.getUId())
-                .orElseThrow();
+        User user = userRepository.findById(input.getUserName()).orElseThrow();
+        log.info("Exiting authenticate with Valid-User-Data:{}", user);
+        return user;
     }
 
 }
