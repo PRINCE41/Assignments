@@ -40,7 +40,7 @@ public class AdminSeeder implements ApplicationListener<ContextRefreshedEvent> {
 
     private void createSuperAdministrator() {
         User user = new User();
-        user.setUserName("super-admin");
+        user.setUsername("super-admin");
         user.setEmail("super.admin@email.com");
         user.setAddress("128, Officer Colony, LMP");
         user.setCreatedAt(new Date());

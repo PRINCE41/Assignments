@@ -68,7 +68,7 @@ public class UsrMngrServiceImpl implements UsrMngrService {
         if(user != null){
             if (user.getUsername() == null) {
                 String id = UUID.randomUUID().toString();
-                user.setUserName(id);
+                user.setUsername(id);
                 kafkaPublisher.publishJournalEntry(id, CommonConsts.REGISTRATION_ACTION);
             }
             else {
@@ -149,7 +149,7 @@ public class UsrMngrServiceImpl implements UsrMngrService {
             return null;
         }
         var user = new User();
-        user.setUserName(input.getUsername());
+        user.setUsername(input.getUsername());
         user.setEmail(input.getEmail());
         user.setPassword(passwordEncoder.encode(input.getPassword()));
         user.setRole(optionalRole.get());
@@ -164,11 +164,11 @@ public class UsrMngrServiceImpl implements UsrMngrService {
         log.info("Entering authenticate with LoginUserDto:{}", input);
         authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(
-                            input.getUserName(),
+                            input.getUsername(),
                             input.getPassword()
                     )
         );
-        User user = userRepository.findById(input.getUserName()).orElseThrow();
+        User user = userRepository.findById(input.getUsername()).orElseThrow();
         log.info("Exiting authenticate with Valid-User-Data:{}", user);
         return user;
     }
