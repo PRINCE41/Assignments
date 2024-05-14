@@ -1,0 +1,466 @@
+2024-05-04 22:38:23,192 INFO o.s.b.StartupInfoLogger [main] Starting UserMngServiceApplication using Java 17.0.10 with PID 21697 (/home/prince03102020/projects/26042024/UserMngService/target/classes started by prince03102020 in /home/prince03102020/projects/26042024/UserMngService)
+2024-05-04 22:38:23,198 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-05-04 22:38:23,645 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2024-05-04 22:38:23,647 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-05-04 22:38:23,723 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 68 ms. Found 2 Redis repository interfaces.
+2024-05-04 22:38:23,883 INFO o.s.c.a.ConfigurationClassEnhancer$BeanMethodInterceptor [main] @Bean method BeanConf.beanFactoryPostProcessor is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2024-05-04 22:38:24,065 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 9889 (http)
+2024-05-04 22:38:24,072 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-9889"]
+2024-05-04 22:38:24,074 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2024-05-04 22:38:24,075 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-04 22:38:24,105 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2024-05-04 22:38:24,107 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 880 ms
+2024-05-04 22:38:24,259 INFO c.a.U.c.s.ApplicationConfiguration [main] Inside userDetailsService
+2024-05-04 22:38:24,439 INFO c.a.U.c.s.ApplicationConfiguration [main] Inside passwordEncoder
+2024-05-04 22:38:24,444 INFO c.a.U.c.s.ApplicationConfiguration [main] Inside authenticationProvider
+2024-05-04 22:38:24,461 INFO c.a.U.s.KafkaPublisher [main] Inside createKafkaProducer
+2024-05-04 22:38:24,473 INFO o.a.k.c.c.AbstractConfig [main] ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2024-05-04 22:38:24,486 INFO o.a.k.c.p.KafkaProducer [main] [Producer clientId=producer-1] Instantiated an idempotent producer.
+2024-05-04 22:38:24,512 INFO o.a.k.c.u.AppInfoParser$AppInfo [main] Kafka version: 3.6.2
+2024-05-04 22:38:24,513 INFO o.a.k.c.u.AppInfoParser$AppInfo [main] Kafka commitId: c4deed513057c94e
+2024-05-04 22:38:24,513 INFO o.a.k.c.u.AppInfoParser$AppInfo [main] Kafka startTimeMs: 1714842504511
+2024-05-04 22:38:24,519 INFO c.a.U.c.s.ApplicationConfiguration [main] Inside authenticationManager
+2024-05-04 22:38:24,669 INFO c.a.U.c.s.SecurityConfiguration [main] Inside securityFilterChain
+2024-05-04 22:38:24,670 INFO o.a.k.c.Metadata [kafka-producer-network-thread | producer-1] [Producer clientId=producer-1] Cluster ID: Gg902wkCTxiAnE84y-_jFw
+2024-05-04 22:38:24,671 INFO o.a.k.c.p.i.TransactionManager [kafka-producer-network-thread | producer-1] [Producer clientId=producer-1] ProducerId set to 1057 with epoch 0
+2024-05-04 22:38:24,688 INFO o.s.s.w.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@12266084, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6da646b8, org.springframework.security.web.context.SecurityContextHolderFilter@68c4db77, org.springframework.security.web.header.HeaderWriterFilter@a1cb94, org.springframework.security.web.authentication.logout.LogoutFilter@42dd7d82, com.apica.UserMngService.config.security.JwtAuthenticationFilter@77e9dca8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7b2e931, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@305881b8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2a65e237, org.springframework.security.web.session.SessionManagementFilter@690ed13a, org.springframework.security.web.access.ExceptionTranslationFilter@6fa3def8, org.springframework.security.web.access.intercept.AuthorizationFilter@4d664323]
+2024-05-04 22:38:24,700 INFO c.a.U.c.s.SecurityConfiguration [main] Inside corsConfigurationSource
+2024-05-04 22:38:24,945 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-9889"]
+2024-05-04 22:38:24,953 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 9889 (http) with context path ''
+2024-05-04 22:38:24,959 INFO c.a.U.b.RoleSeeder [main] Entering loadRoles
+2024-05-04 22:38:25,015 INFO c.a.U.b.RoleSeeder [main] Going to create RoleData:Role(id=1, name=USER, description=Default user role, createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024) in repository
+2024-05-04 22:38:25,031 INFO c.a.U.b.RoleSeeder [main] Going to create RoleData:Role(id=2, name=ADMIN, description=Administrator role, createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024) in repository
+2024-05-04 22:38:25,033 INFO c.a.U.b.RoleSeeder [main] Going to create RoleData:Role(id=3, name=SUPER_ADMIN, description=Super Administrator role, createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024) in repository
+2024-05-04 22:38:25,034 INFO c.a.U.b.RoleSeeder [main] Exiting loadRoles
+2024-05-04 22:38:25,111 INFO c.a.U.b.AdminSeeder [main] Creating super-admin session data
+2024-05-04 22:38:25,118 INFO o.s.b.StartupInfoLogger [main] Started UserMngServiceApplication in 2.165 seconds (process running for 2.47)
+2024-05-04 22:38:25,120 INFO c.a.U.UserMngServiceApplication [main] Exiting main
+2024-05-04 22:39:25,887 INFO o.a.j.l.DirectJDKLog [http-nio-9889-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-04 22:39:25,887 INFO o.s.w.s.FrameworkServlet [http-nio-9889-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-05-04 22:39:25,888 INFO o.s.w.s.FrameworkServlet [http-nio-9889-exec-1] Completed initialization in 1 ms
+2024-05-04 22:39:25,902 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-1] Inside doFilterInternal
+2024-05-04 22:39:25,959 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-1] Inside register
+2024-05-04 22:39:25,959 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-1] Entering createUser with data:User(username=john_doe_22, password=pawan123, email=john_3@example.com, address=789 Main St, role=null, createdAt=null, updatedAt=null)
+2024-05-04 22:39:25,964 INFO c.a.U.s.KafkaPublisher [http-nio-9889-exec-1] Id:john_doe_22 Entering publishJournalEntry
+2024-05-04 22:39:25,989 INFO c.a.U.s.KafkaPublisher [http-nio-9889-exec-1] Id:john_doe_22 Exiting publishJournalEntry
+2024-05-04 22:39:26,063 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-1] Id:john_doe_22 Exiting createUser
+2024-05-04 22:39:28,483 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-3] Inside doFilterInternal
+2024-05-04 22:39:28,485 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-3] Entering authenticate
+2024-05-04 22:39:28,486 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-3] Entering authenticate with LoginUserDto:LoginUserDto(username=null, password=pawan123)
+2024-05-04 22:39:32,443 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-4] Inside doFilterInternal
+2024-05-04 22:39:32,445 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-4] Entering authenticate
+2024-05-04 22:39:32,445 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-4] Entering authenticate with LoginUserDto:LoginUserDto(username=john_doe_22, password=pawan123)
+2024-05-04 22:39:32,532 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-4] Exiting authenticate with Valid-User-Data:User(username=john_doe_22, password=$2a$10$oQO2RP2gh4oWAue36mbNAOcn/srEW/oFfnywPGCcJHxuQy1l2LJyy, email=john_3@example.com, address=789 Main St, role=Role(id=1, name=USER, description=Default user role, createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024), createdAt=Sat May 04 22:39:26 IST 2024, updatedAt=Sat May 04 22:39:26 IST 2024)
+2024-05-04 22:39:32,532 INFO c.a.U.s.JwtService [http-nio-9889-exec-4] Inside generateToken-1Arg with UserDetails:User(username=john_doe_22, password=$2a$10$oQO2RP2gh4oWAue36mbNAOcn/srEW/oFfnywPGCcJHxuQy1l2LJyy, email=john_3@example.com, address=789 Main St, role=Role(id=1, name=USER, description=Default user role, createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024), createdAt=Sat May 04 22:39:26 IST 2024, updatedAt=Sat May 04 22:39:26 IST 2024)
+2024-05-04 22:39:32,532 INFO c.a.U.s.JwtService [http-nio-9889-exec-4] Inside generateToken-2Arg with UserDetails:User(username=john_doe_22, password=$2a$10$oQO2RP2gh4oWAue36mbNAOcn/srEW/oFfnywPGCcJHxuQy1l2LJyy, email=john_3@example.com, address=789 Main St, role=Role(id=1, name=USER, description=Default user role, createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024), createdAt=Sat May 04 22:39:26 IST 2024, updatedAt=Sat May 04 22:39:26 IST 2024)
+2024-05-04 22:39:32,533 INFO c.a.U.s.JwtService [http-nio-9889-exec-4] Inside buildToken
+2024-05-04 22:39:32,538 INFO c.a.U.s.JwtService [http-nio-9889-exec-4] Inside getSignInKey
+2024-05-04 22:39:32,551 INFO c.a.U.s.JwtService [http-nio-9889-exec-4] Inside getExpirationTime
+2024-05-04 22:39:32,551 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-4] Exiting authenticate
+2024-05-04 22:39:44,647 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-5] Inside doFilterInternal
+2024-05-04 22:39:44,647 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Inside extractUsername with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huX2RvZV8yMiIsImlhdCI6MTcxNDg0MjU3MiwiZXhwIjoxNzE0ODQ2MTcyfQ.fvMNYh7sw-6vteGJvKQ8toWAhF84V41RZQo6vP6Su6I
+2024-05-04 22:39:44,647 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huX2RvZV8yMiIsImlhdCI6MTcxNDg0MjU3MiwiZXhwIjoxNzE0ODQ2MTcyfQ.fvMNYh7sw-6vteGJvKQ8toWAhF84V41RZQo6vP6Su6I claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1684/0x00007f69c4824d10@25fc6044
+2024-05-04 22:39:44,648 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Inside extractAllClaims
+2024-05-04 22:39:44,654 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Inside getSignInKey
+2024-05-04 22:39:44,670 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Exiting extractUsername with extractedData:john_doe_22
+2024-05-04 22:39:44,671 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-5] userId:john_doe_22 jwt:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huX2RvZV8yMiIsImlhdCI6MTcxNDg0MjU3MiwiZXhwIjoxNzE0ODQ2MTcyfQ.fvMNYh7sw-6vteGJvKQ8toWAhF84V41RZQo6vP6Su6I
+2024-05-04 22:39:44,671 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-5] Authentication data:null
+2024-05-04 22:39:44,671 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-5] Entered userId != null && authentication == null
+2024-05-04 22:39:44,674 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-5] userDetails fetched internally:User(username=john_doe_22, password=$2a$10$oQO2RP2gh4oWAue36mbNAOcn/srEW/oFfnywPGCcJHxuQy1l2LJyy, email=john_3@example.com, address=789 Main St, role=Role(id=1, name=USER, description=Default user role, createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024), createdAt=Sat May 04 22:39:26 IST 2024, updatedAt=Sat May 04 22:39:26 IST 2024)
+2024-05-04 22:39:44,675 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Inside isTokenValid with UserDetails:User(username=john_doe_22, password=$2a$10$oQO2RP2gh4oWAue36mbNAOcn/srEW/oFfnywPGCcJHxuQy1l2LJyy, email=john_3@example.com, address=789 Main St, role=Role(id=1, name=USER, description=Default user role, createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024), createdAt=Sat May 04 22:39:26 IST 2024, updatedAt=Sat May 04 22:39:26 IST 2024)
+2024-05-04 22:39:44,675 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Inside extractUsername with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huX2RvZV8yMiIsImlhdCI6MTcxNDg0MjU3MiwiZXhwIjoxNzE0ODQ2MTcyfQ.fvMNYh7sw-6vteGJvKQ8toWAhF84V41RZQo6vP6Su6I
+2024-05-04 22:39:44,675 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huX2RvZV8yMiIsImlhdCI6MTcxNDg0MjU3MiwiZXhwIjoxNzE0ODQ2MTcyfQ.fvMNYh7sw-6vteGJvKQ8toWAhF84V41RZQo6vP6Su6I claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1684/0x00007f69c4824d10@25fc6044
+2024-05-04 22:39:44,675 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Inside extractAllClaims
+2024-05-04 22:39:44,675 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Inside getSignInKey
+2024-05-04 22:39:44,676 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Exiting extractUsername with extractedData:john_doe_22
+2024-05-04 22:39:44,676 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Inside isTokenExpired
+2024-05-04 22:39:44,677 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Inside extractExpiration
+2024-05-04 22:39:44,677 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huX2RvZV8yMiIsImlhdCI6MTcxNDg0MjU3MiwiZXhwIjoxNzE0ODQ2MTcyfQ.fvMNYh7sw-6vteGJvKQ8toWAhF84V41RZQo6vP6Su6I claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1685/0x00007f69c482c618@14bfdb9c
+2024-05-04 22:39:44,677 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Inside extractAllClaims
+2024-05-04 22:39:44,677 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Inside getSignInKey
+2024-05-04 22:39:44,678 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Expected username:john_doe_22 IsTokenExpired:false
+2024-05-04 22:39:44,678 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Inside isTokenExpired
+2024-05-04 22:39:44,678 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Inside extractExpiration
+2024-05-04 22:39:44,679 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huX2RvZV8yMiIsImlhdCI6MTcxNDg0MjU3MiwiZXhwIjoxNzE0ODQ2MTcyfQ.fvMNYh7sw-6vteGJvKQ8toWAhF84V41RZQo6vP6Su6I claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1685/0x00007f69c482c618@14bfdb9c
+2024-05-04 22:39:44,679 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Inside extractAllClaims
+2024-05-04 22:39:44,679 INFO c.a.U.s.JwtService [http-nio-9889-exec-5] Inside getSignInKey
+2024-05-04 22:39:44,685 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-5] Entering getCurrentUser
+2024-05-04 22:39:44,685 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-5] Authentication data:UsernamePasswordAuthenticationToken [Principal=User(username=john_doe_22, password=$2a$10$oQO2RP2gh4oWAue36mbNAOcn/srEW/oFfnywPGCcJHxuQy1l2LJyy, email=john_3@example.com, address=789 Main St, role=Role(id=1, name=USER, description=Default user role, createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024), createdAt=Sat May 04 22:39:26 IST 2024, updatedAt=Sat May 04 22:39:26 IST 2024), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_USER]]
+2024-05-04 22:39:44,685 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-5] authentication.getPrincipal():User(username=john_doe_22, password=$2a$10$oQO2RP2gh4oWAue36mbNAOcn/srEW/oFfnywPGCcJHxuQy1l2LJyy, email=john_3@example.com, address=789 Main St, role=Role(id=1, name=USER, description=Default user role, createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024), createdAt=Sat May 04 22:39:26 IST 2024, updatedAt=Sat May 04 22:39:26 IST 2024)
+2024-05-04 22:39:44,686 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-5] Exiting getCurrentUser
+2024-05-04 22:39:50,071 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-6] Inside doFilterInternal
+2024-05-04 22:39:50,071 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside extractUsername with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huX2RvZV8yMiIsImlhdCI6MTcxNDg0MjU3MiwiZXhwIjoxNzE0ODQ2MTcyfQ.fvMNYh7sw-6vteGJvKQ8toWAhF84V41RZQo6vP6Su6I
+2024-05-04 22:39:50,071 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huX2RvZV8yMiIsImlhdCI6MTcxNDg0MjU3MiwiZXhwIjoxNzE0ODQ2MTcyfQ.fvMNYh7sw-6vteGJvKQ8toWAhF84V41RZQo6vP6Su6I claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1684/0x00007f69c4824d10@25fc6044
+2024-05-04 22:39:50,072 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside extractAllClaims
+2024-05-04 22:39:50,072 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside getSignInKey
+2024-05-04 22:39:50,073 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Exiting extractUsername with extractedData:john_doe_22
+2024-05-04 22:39:50,074 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-6] userId:john_doe_22 jwt:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huX2RvZV8yMiIsImlhdCI6MTcxNDg0MjU3MiwiZXhwIjoxNzE0ODQ2MTcyfQ.fvMNYh7sw-6vteGJvKQ8toWAhF84V41RZQo6vP6Su6I
+2024-05-04 22:39:50,074 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-6] Authentication data:null
+2024-05-04 22:39:50,074 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-6] Entered userId != null && authentication == null
+2024-05-04 22:39:50,076 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-6] userDetails fetched internally:User(username=john_doe_22, password=$2a$10$oQO2RP2gh4oWAue36mbNAOcn/srEW/oFfnywPGCcJHxuQy1l2LJyy, email=john_3@example.com, address=789 Main St, role=Role(id=1, name=USER, description=Default user role, createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024), createdAt=Sat May 04 22:39:26 IST 2024, updatedAt=Sat May 04 22:39:26 IST 2024)
+2024-05-04 22:39:50,076 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside isTokenValid with UserDetails:User(username=john_doe_22, password=$2a$10$oQO2RP2gh4oWAue36mbNAOcn/srEW/oFfnywPGCcJHxuQy1l2LJyy, email=john_3@example.com, address=789 Main St, role=Role(id=1, name=USER, description=Default user role, createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024), createdAt=Sat May 04 22:39:26 IST 2024, updatedAt=Sat May 04 22:39:26 IST 2024)
+2024-05-04 22:39:50,077 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside extractUsername with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huX2RvZV8yMiIsImlhdCI6MTcxNDg0MjU3MiwiZXhwIjoxNzE0ODQ2MTcyfQ.fvMNYh7sw-6vteGJvKQ8toWAhF84V41RZQo6vP6Su6I
+2024-05-04 22:39:50,077 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huX2RvZV8yMiIsImlhdCI6MTcxNDg0MjU3MiwiZXhwIjoxNzE0ODQ2MTcyfQ.fvMNYh7sw-6vteGJvKQ8toWAhF84V41RZQo6vP6Su6I claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1684/0x00007f69c4824d10@25fc6044
+2024-05-04 22:39:50,077 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside extractAllClaims
+2024-05-04 22:39:50,077 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside getSignInKey
+2024-05-04 22:39:50,078 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Exiting extractUsername with extractedData:john_doe_22
+2024-05-04 22:39:50,078 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside isTokenExpired
+2024-05-04 22:39:50,078 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside extractExpiration
+2024-05-04 22:39:50,078 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huX2RvZV8yMiIsImlhdCI6MTcxNDg0MjU3MiwiZXhwIjoxNzE0ODQ2MTcyfQ.fvMNYh7sw-6vteGJvKQ8toWAhF84V41RZQo6vP6Su6I claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1685/0x00007f69c482c618@14bfdb9c
+2024-05-04 22:39:50,078 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside extractAllClaims
+2024-05-04 22:39:50,079 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside getSignInKey
+2024-05-04 22:39:50,079 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Expected username:john_doe_22 IsTokenExpired:false
+2024-05-04 22:39:50,080 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside isTokenExpired
+2024-05-04 22:39:50,080 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside extractExpiration
+2024-05-04 22:39:50,080 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huX2RvZV8yMiIsImlhdCI6MTcxNDg0MjU3MiwiZXhwIjoxNzE0ODQ2MTcyfQ.fvMNYh7sw-6vteGJvKQ8toWAhF84V41RZQo6vP6Su6I claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1685/0x00007f69c482c618@14bfdb9c
+2024-05-04 22:39:50,080 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside extractAllClaims
+2024-05-04 22:39:50,080 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside getSignInKey
+2024-05-04 22:39:54,522 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-7] Inside doFilterInternal
+2024-05-04 22:39:54,524 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-7] Entering authenticate
+2024-05-04 22:39:54,524 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-7] Entering authenticate with LoginUserDto:LoginUserDto(username=super-admin, password=123456)
+2024-05-04 22:39:54,591 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-7] Exiting authenticate with Valid-User-Data:User(username=super-admin, password=$2a$10$A3GPM2.pFrD5LhJ5hrothugiRTf0zHH2DKcWtxtedERFIkJ4f7gkO, email=super.admin@email.com, address=128, Officer Colony, LMP, role=Role(id=3, name=SUPER_ADMIN, description=Super Administrator role, createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024), createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024)
+2024-05-04 22:39:54,591 INFO c.a.U.s.JwtService [http-nio-9889-exec-7] Inside generateToken-1Arg with UserDetails:User(username=super-admin, password=$2a$10$A3GPM2.pFrD5LhJ5hrothugiRTf0zHH2DKcWtxtedERFIkJ4f7gkO, email=super.admin@email.com, address=128, Officer Colony, LMP, role=Role(id=3, name=SUPER_ADMIN, description=Super Administrator role, createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024), createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024)
+2024-05-04 22:39:54,591 INFO c.a.U.s.JwtService [http-nio-9889-exec-7] Inside generateToken-2Arg with UserDetails:User(username=super-admin, password=$2a$10$A3GPM2.pFrD5LhJ5hrothugiRTf0zHH2DKcWtxtedERFIkJ4f7gkO, email=super.admin@email.com, address=128, Officer Colony, LMP, role=Role(id=3, name=SUPER_ADMIN, description=Super Administrator role, createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024), createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024)
+2024-05-04 22:39:54,591 INFO c.a.U.s.JwtService [http-nio-9889-exec-7] Inside buildToken
+2024-05-04 22:39:54,592 INFO c.a.U.s.JwtService [http-nio-9889-exec-7] Inside getSignInKey
+2024-05-04 22:39:54,592 INFO c.a.U.s.JwtService [http-nio-9889-exec-7] Inside getExpirationTime
+2024-05-04 22:39:54,593 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-7] Exiting authenticate
+2024-05-04 22:39:59,640 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-8] Inside doFilterInternal
+2024-05-04 22:39:59,641 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-8] Entering authenticate
+2024-05-04 22:39:59,641 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-8] Entering authenticate with LoginUserDto:LoginUserDto(username=null, password=123456)
+2024-05-04 22:40:04,466 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-9] Inside doFilterInternal
+2024-05-04 22:40:04,467 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-9] Entering authenticate
+2024-05-04 22:40:04,467 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-9] Entering authenticate with LoginUserDto:LoginUserDto(username=super-admin, password=123456)
+2024-05-04 22:40:04,538 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-9] Exiting authenticate with Valid-User-Data:User(username=super-admin, password=$2a$10$A3GPM2.pFrD5LhJ5hrothugiRTf0zHH2DKcWtxtedERFIkJ4f7gkO, email=super.admin@email.com, address=128, Officer Colony, LMP, role=Role(id=3, name=SUPER_ADMIN, description=Super Administrator role, createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024), createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024)
+2024-05-04 22:40:04,538 INFO c.a.U.s.JwtService [http-nio-9889-exec-9] Inside generateToken-1Arg with UserDetails:User(username=super-admin, password=$2a$10$A3GPM2.pFrD5LhJ5hrothugiRTf0zHH2DKcWtxtedERFIkJ4f7gkO, email=super.admin@email.com, address=128, Officer Colony, LMP, role=Role(id=3, name=SUPER_ADMIN, description=Super Administrator role, createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024), createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024)
+2024-05-04 22:40:04,538 INFO c.a.U.s.JwtService [http-nio-9889-exec-9] Inside generateToken-2Arg with UserDetails:User(username=super-admin, password=$2a$10$A3GPM2.pFrD5LhJ5hrothugiRTf0zHH2DKcWtxtedERFIkJ4f7gkO, email=super.admin@email.com, address=128, Officer Colony, LMP, role=Role(id=3, name=SUPER_ADMIN, description=Super Administrator role, createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024), createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024)
+2024-05-04 22:40:04,538 INFO c.a.U.s.JwtService [http-nio-9889-exec-9] Inside buildToken
+2024-05-04 22:40:04,538 INFO c.a.U.s.JwtService [http-nio-9889-exec-9] Inside getSignInKey
+2024-05-04 22:40:04,539 INFO c.a.U.s.JwtService [http-nio-9889-exec-9] Inside getExpirationTime
+2024-05-04 22:40:04,540 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-9] Exiting authenticate
+2024-05-04 22:40:18,253 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-10] Inside doFilterInternal
+2024-05-04 22:40:18,254 INFO c.a.U.s.JwtService [http-nio-9889-exec-10] Inside extractUsername with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci1hZG1pbiIsImlhdCI6MTcxNDg0MjYwNCwiZXhwIjoxNzE0ODQ2MjA0fQ.UMgF-iqpfojk0WV3CmSbl0OzuvAyC9u_FJlOwQBPuaM
+2024-05-04 22:40:18,254 INFO c.a.U.s.JwtService [http-nio-9889-exec-10] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci1hZG1pbiIsImlhdCI6MTcxNDg0MjYwNCwiZXhwIjoxNzE0ODQ2MjA0fQ.UMgF-iqpfojk0WV3CmSbl0OzuvAyC9u_FJlOwQBPuaM claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1684/0x00007f69c4824d10@25fc6044
+2024-05-04 22:40:18,254 INFO c.a.U.s.JwtService [http-nio-9889-exec-10] Inside extractAllClaims
+2024-05-04 22:40:18,254 INFO c.a.U.s.JwtService [http-nio-9889-exec-10] Inside getSignInKey
+2024-05-04 22:40:18,255 INFO c.a.U.s.JwtService [http-nio-9889-exec-10] Exiting extractUsername with extractedData:super-admin
+2024-05-04 22:40:18,255 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-10] userId:super-admin jwt:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci1hZG1pbiIsImlhdCI6MTcxNDg0MjYwNCwiZXhwIjoxNzE0ODQ2MjA0fQ.UMgF-iqpfojk0WV3CmSbl0OzuvAyC9u_FJlOwQBPuaM
+2024-05-04 22:40:18,255 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-10] Authentication data:null
+2024-05-04 22:40:18,255 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-10] Entered userId != null && authentication == null
+2024-05-04 22:40:18,256 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-10] userDetails fetched internally:User(username=super-admin, password=$2a$10$A3GPM2.pFrD5LhJ5hrothugiRTf0zHH2DKcWtxtedERFIkJ4f7gkO, email=super.admin@email.com, address=128, Officer Colony, LMP, role=Role(id=3, name=SUPER_ADMIN, description=Super Administrator role, createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024), createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024)
+2024-05-04 22:40:18,256 INFO c.a.U.s.JwtService [http-nio-9889-exec-10] Inside isTokenValid with UserDetails:User(username=super-admin, password=$2a$10$A3GPM2.pFrD5LhJ5hrothugiRTf0zHH2DKcWtxtedERFIkJ4f7gkO, email=super.admin@email.com, address=128, Officer Colony, LMP, role=Role(id=3, name=SUPER_ADMIN, description=Super Administrator role, createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024), createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024)
+2024-05-04 22:40:18,256 INFO c.a.U.s.JwtService [http-nio-9889-exec-10] Inside extractUsername with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci1hZG1pbiIsImlhdCI6MTcxNDg0MjYwNCwiZXhwIjoxNzE0ODQ2MjA0fQ.UMgF-iqpfojk0WV3CmSbl0OzuvAyC9u_FJlOwQBPuaM
+2024-05-04 22:40:18,256 INFO c.a.U.s.JwtService [http-nio-9889-exec-10] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci1hZG1pbiIsImlhdCI6MTcxNDg0MjYwNCwiZXhwIjoxNzE0ODQ2MjA0fQ.UMgF-iqpfojk0WV3CmSbl0OzuvAyC9u_FJlOwQBPuaM claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1684/0x00007f69c4824d10@25fc6044
+2024-05-04 22:40:18,257 INFO c.a.U.s.JwtService [http-nio-9889-exec-10] Inside extractAllClaims
+2024-05-04 22:40:18,257 INFO c.a.U.s.JwtService [http-nio-9889-exec-10] Inside getSignInKey
+2024-05-04 22:40:18,258 INFO c.a.U.s.JwtService [http-nio-9889-exec-10] Exiting extractUsername with extractedData:super-admin
+2024-05-04 22:40:18,258 INFO c.a.U.s.JwtService [http-nio-9889-exec-10] Inside isTokenExpired
+2024-05-04 22:40:18,258 INFO c.a.U.s.JwtService [http-nio-9889-exec-10] Inside extractExpiration
+2024-05-04 22:40:18,258 INFO c.a.U.s.JwtService [http-nio-9889-exec-10] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci1hZG1pbiIsImlhdCI6MTcxNDg0MjYwNCwiZXhwIjoxNzE0ODQ2MjA0fQ.UMgF-iqpfojk0WV3CmSbl0OzuvAyC9u_FJlOwQBPuaM claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1685/0x00007f69c482c618@14bfdb9c
+2024-05-04 22:40:18,258 INFO c.a.U.s.JwtService [http-nio-9889-exec-10] Inside extractAllClaims
+2024-05-04 22:40:18,258 INFO c.a.U.s.JwtService [http-nio-9889-exec-10] Inside getSignInKey
+2024-05-04 22:40:18,259 INFO c.a.U.s.JwtService [http-nio-9889-exec-10] Expected username:super-admin IsTokenExpired:false
+2024-05-04 22:40:18,259 INFO c.a.U.s.JwtService [http-nio-9889-exec-10] Inside isTokenExpired
+2024-05-04 22:40:18,259 INFO c.a.U.s.JwtService [http-nio-9889-exec-10] Inside extractExpiration
+2024-05-04 22:40:18,259 INFO c.a.U.s.JwtService [http-nio-9889-exec-10] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci1hZG1pbiIsImlhdCI6MTcxNDg0MjYwNCwiZXhwIjoxNzE0ODQ2MjA0fQ.UMgF-iqpfojk0WV3CmSbl0OzuvAyC9u_FJlOwQBPuaM claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1685/0x00007f69c482c618@14bfdb9c
+2024-05-04 22:40:18,259 INFO c.a.U.s.JwtService [http-nio-9889-exec-10] Inside extractAllClaims
+2024-05-04 22:40:18,259 INFO c.a.U.s.JwtService [http-nio-9889-exec-10] Inside getSignInKey
+2024-05-04 22:40:24,907 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-2] Inside doFilterInternal
+2024-05-04 22:40:24,907 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside extractUsername with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci1hZG1pbiIsImlhdCI6MTcxNDg0MjYwNCwiZXhwIjoxNzE0ODQ2MjA0fQ.UMgF-iqpfojk0WV3CmSbl0OzuvAyC9u_FJlOwQBPuaM
+2024-05-04 22:40:24,907 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci1hZG1pbiIsImlhdCI6MTcxNDg0MjYwNCwiZXhwIjoxNzE0ODQ2MjA0fQ.UMgF-iqpfojk0WV3CmSbl0OzuvAyC9u_FJlOwQBPuaM claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1684/0x00007f69c4824d10@25fc6044
+2024-05-04 22:40:24,907 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside extractAllClaims
+2024-05-04 22:40:24,907 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside getSignInKey
+2024-05-04 22:40:24,908 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Exiting extractUsername with extractedData:super-admin
+2024-05-04 22:40:24,908 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-2] userId:super-admin jwt:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci1hZG1pbiIsImlhdCI6MTcxNDg0MjYwNCwiZXhwIjoxNzE0ODQ2MjA0fQ.UMgF-iqpfojk0WV3CmSbl0OzuvAyC9u_FJlOwQBPuaM
+2024-05-04 22:40:24,908 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-2] Authentication data:null
+2024-05-04 22:40:24,908 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-2] Entered userId != null && authentication == null
+2024-05-04 22:40:24,909 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-2] userDetails fetched internally:User(username=super-admin, password=$2a$10$A3GPM2.pFrD5LhJ5hrothugiRTf0zHH2DKcWtxtedERFIkJ4f7gkO, email=super.admin@email.com, address=128, Officer Colony, LMP, role=Role(id=3, name=SUPER_ADMIN, description=Super Administrator role, createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024), createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024)
+2024-05-04 22:40:24,909 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside isTokenValid with UserDetails:User(username=super-admin, password=$2a$10$A3GPM2.pFrD5LhJ5hrothugiRTf0zHH2DKcWtxtedERFIkJ4f7gkO, email=super.admin@email.com, address=128, Officer Colony, LMP, role=Role(id=3, name=SUPER_ADMIN, description=Super Administrator role, createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024), createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024)
+2024-05-04 22:40:24,909 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside extractUsername with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci1hZG1pbiIsImlhdCI6MTcxNDg0MjYwNCwiZXhwIjoxNzE0ODQ2MjA0fQ.UMgF-iqpfojk0WV3CmSbl0OzuvAyC9u_FJlOwQBPuaM
+2024-05-04 22:40:24,910 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci1hZG1pbiIsImlhdCI6MTcxNDg0MjYwNCwiZXhwIjoxNzE0ODQ2MjA0fQ.UMgF-iqpfojk0WV3CmSbl0OzuvAyC9u_FJlOwQBPuaM claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1684/0x00007f69c4824d10@25fc6044
+2024-05-04 22:40:24,910 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside extractAllClaims
+2024-05-04 22:40:24,910 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside getSignInKey
+2024-05-04 22:40:24,911 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Exiting extractUsername with extractedData:super-admin
+2024-05-04 22:40:24,911 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside isTokenExpired
+2024-05-04 22:40:24,911 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside extractExpiration
+2024-05-04 22:40:24,911 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci1hZG1pbiIsImlhdCI6MTcxNDg0MjYwNCwiZXhwIjoxNzE0ODQ2MjA0fQ.UMgF-iqpfojk0WV3CmSbl0OzuvAyC9u_FJlOwQBPuaM claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1685/0x00007f69c482c618@14bfdb9c
+2024-05-04 22:40:24,911 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside extractAllClaims
+2024-05-04 22:40:24,911 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside getSignInKey
+2024-05-04 22:40:24,912 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Expected username:super-admin IsTokenExpired:false
+2024-05-04 22:40:24,912 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside isTokenExpired
+2024-05-04 22:40:24,912 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside extractExpiration
+2024-05-04 22:40:24,912 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci1hZG1pbiIsImlhdCI6MTcxNDg0MjYwNCwiZXhwIjoxNzE0ODQ2MjA0fQ.UMgF-iqpfojk0WV3CmSbl0OzuvAyC9u_FJlOwQBPuaM claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1685/0x00007f69c482c618@14bfdb9c
+2024-05-04 22:40:24,912 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside extractAllClaims
+2024-05-04 22:40:24,912 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside getSignInKey
+2024-05-04 22:40:24,914 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-2] Inside getAllUsers
+2024-05-04 22:40:24,914 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-2] Entering getAllUsers
+2024-05-04 22:40:24,915 INFO c.a.U.s.KafkaPublisher [http-nio-9889-exec-2] Id:N2bw4wKNS_697g5AWdqkVQ Entering publishJournalEntry
+2024-05-04 22:40:24,915 INFO c.a.U.s.KafkaPublisher [http-nio-9889-exec-2] Id:N2bw4wKNS_697g5AWdqkVQ Exiting publishJournalEntry
+2024-05-04 22:40:24,922 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-2] Exiting getAllUsers
+2024-05-04 22:41:18,688 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-1] Inside doFilterInternal
+2024-05-04 22:41:18,690 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-1] Entering authenticate
+2024-05-04 22:41:18,690 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-1] Entering authenticate with LoginUserDto:LoginUserDto(username=admin-001, password=123456)
+2024-05-04 22:41:28,134 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-3] Inside doFilterInternal
+2024-05-04 22:41:28,135 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-3] Entering authenticate
+2024-05-04 22:41:28,136 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-3] Entering authenticate with LoginUserDto:LoginUserDto(username=admin_001, password=123456)
+2024-05-04 22:41:47,693 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-4] Inside doFilterInternal
+2024-05-04 22:41:47,693 INFO c.a.U.s.JwtService [http-nio-9889-exec-4] Inside extractUsername with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci1hZG1pbiIsImlhdCI6MTcxNDg0MjYwNCwiZXhwIjoxNzE0ODQ2MjA0fQ.UMgF-iqpfojk0WV3CmSbl0OzuvAyC9u_FJlOwQBPuaM
+2024-05-04 22:41:47,694 INFO c.a.U.s.JwtService [http-nio-9889-exec-4] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci1hZG1pbiIsImlhdCI6MTcxNDg0MjYwNCwiZXhwIjoxNzE0ODQ2MjA0fQ.UMgF-iqpfojk0WV3CmSbl0OzuvAyC9u_FJlOwQBPuaM claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1684/0x00007f69c4824d10@25fc6044
+2024-05-04 22:41:47,694 INFO c.a.U.s.JwtService [http-nio-9889-exec-4] Inside extractAllClaims
+2024-05-04 22:41:47,694 INFO c.a.U.s.JwtService [http-nio-9889-exec-4] Inside getSignInKey
+2024-05-04 22:41:47,695 INFO c.a.U.s.JwtService [http-nio-9889-exec-4] Exiting extractUsername with extractedData:super-admin
+2024-05-04 22:41:47,695 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-4] userId:super-admin jwt:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci1hZG1pbiIsImlhdCI6MTcxNDg0MjYwNCwiZXhwIjoxNzE0ODQ2MjA0fQ.UMgF-iqpfojk0WV3CmSbl0OzuvAyC9u_FJlOwQBPuaM
+2024-05-04 22:41:47,695 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-4] Authentication data:null
+2024-05-04 22:41:47,695 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-4] Entered userId != null && authentication == null
+2024-05-04 22:41:47,696 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-4] userDetails fetched internally:User(username=super-admin, password=$2a$10$A3GPM2.pFrD5LhJ5hrothugiRTf0zHH2DKcWtxtedERFIkJ4f7gkO, email=super.admin@email.com, address=128, Officer Colony, LMP, role=Role(id=3, name=SUPER_ADMIN, description=Super Administrator role, createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024), createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024)
+2024-05-04 22:41:47,696 INFO c.a.U.s.JwtService [http-nio-9889-exec-4] Inside isTokenValid with UserDetails:User(username=super-admin, password=$2a$10$A3GPM2.pFrD5LhJ5hrothugiRTf0zHH2DKcWtxtedERFIkJ4f7gkO, email=super.admin@email.com, address=128, Officer Colony, LMP, role=Role(id=3, name=SUPER_ADMIN, description=Super Administrator role, createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024), createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024)
+2024-05-04 22:41:47,696 INFO c.a.U.s.JwtService [http-nio-9889-exec-4] Inside extractUsername with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci1hZG1pbiIsImlhdCI6MTcxNDg0MjYwNCwiZXhwIjoxNzE0ODQ2MjA0fQ.UMgF-iqpfojk0WV3CmSbl0OzuvAyC9u_FJlOwQBPuaM
+2024-05-04 22:41:47,696 INFO c.a.U.s.JwtService [http-nio-9889-exec-4] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci1hZG1pbiIsImlhdCI6MTcxNDg0MjYwNCwiZXhwIjoxNzE0ODQ2MjA0fQ.UMgF-iqpfojk0WV3CmSbl0OzuvAyC9u_FJlOwQBPuaM claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1684/0x00007f69c4824d10@25fc6044
+2024-05-04 22:41:47,697 INFO c.a.U.s.JwtService [http-nio-9889-exec-4] Inside extractAllClaims
+2024-05-04 22:41:47,697 INFO c.a.U.s.JwtService [http-nio-9889-exec-4] Inside getSignInKey
+2024-05-04 22:41:47,698 INFO c.a.U.s.JwtService [http-nio-9889-exec-4] Exiting extractUsername with extractedData:super-admin
+2024-05-04 22:41:47,699 INFO c.a.U.s.JwtService [http-nio-9889-exec-4] Inside isTokenExpired
+2024-05-04 22:41:47,699 INFO c.a.U.s.JwtService [http-nio-9889-exec-4] Inside extractExpiration
+2024-05-04 22:41:47,699 INFO c.a.U.s.JwtService [http-nio-9889-exec-4] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci1hZG1pbiIsImlhdCI6MTcxNDg0MjYwNCwiZXhwIjoxNzE0ODQ2MjA0fQ.UMgF-iqpfojk0WV3CmSbl0OzuvAyC9u_FJlOwQBPuaM claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1685/0x00007f69c482c618@14bfdb9c
+2024-05-04 22:41:47,699 INFO c.a.U.s.JwtService [http-nio-9889-exec-4] Inside extractAllClaims
+2024-05-04 22:41:47,699 INFO c.a.U.s.JwtService [http-nio-9889-exec-4] Inside getSignInKey
+2024-05-04 22:41:47,700 INFO c.a.U.s.JwtService [http-nio-9889-exec-4] Expected username:super-admin IsTokenExpired:false
+2024-05-04 22:41:47,701 INFO c.a.U.s.JwtService [http-nio-9889-exec-4] Inside isTokenExpired
+2024-05-04 22:41:47,701 INFO c.a.U.s.JwtService [http-nio-9889-exec-4] Inside extractExpiration
+2024-05-04 22:41:47,701 INFO c.a.U.s.JwtService [http-nio-9889-exec-4] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci1hZG1pbiIsImlhdCI6MTcxNDg0MjYwNCwiZXhwIjoxNzE0ODQ2MjA0fQ.UMgF-iqpfojk0WV3CmSbl0OzuvAyC9u_FJlOwQBPuaM claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1685/0x00007f69c482c618@14bfdb9c
+2024-05-04 22:41:47,701 INFO c.a.U.s.JwtService [http-nio-9889-exec-4] Inside extractAllClaims
+2024-05-04 22:41:47,701 INFO c.a.U.s.JwtService [http-nio-9889-exec-4] Inside getSignInKey
+2024-05-04 22:41:52,014 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-5] Inside doFilterInternal
+2024-05-04 22:41:52,015 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-5] Entering authenticate
+2024-05-04 22:41:52,015 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-5] Entering authenticate with LoginUserDto:LoginUserDto(username=admin_001, password=123456)
+2024-05-04 22:42:11,274 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-6] Inside doFilterInternal
+2024-05-04 22:42:11,274 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside extractUsername with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci1hZG1pbiIsImlhdCI6MTcxNDg0MjYwNCwiZXhwIjoxNzE0ODQ2MjA0fQ.UMgF-iqpfojk0WV3CmSbl0OzuvAyC9u_FJlOwQBPuaM
+2024-05-04 22:42:11,274 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci1hZG1pbiIsImlhdCI6MTcxNDg0MjYwNCwiZXhwIjoxNzE0ODQ2MjA0fQ.UMgF-iqpfojk0WV3CmSbl0OzuvAyC9u_FJlOwQBPuaM claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1684/0x00007f69c4824d10@25fc6044
+2024-05-04 22:42:11,274 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside extractAllClaims
+2024-05-04 22:42:11,275 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside getSignInKey
+2024-05-04 22:42:11,276 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Exiting extractUsername with extractedData:super-admin
+2024-05-04 22:42:11,276 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-6] userId:super-admin jwt:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci1hZG1pbiIsImlhdCI6MTcxNDg0MjYwNCwiZXhwIjoxNzE0ODQ2MjA0fQ.UMgF-iqpfojk0WV3CmSbl0OzuvAyC9u_FJlOwQBPuaM
+2024-05-04 22:42:11,276 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-6] Authentication data:null
+2024-05-04 22:42:11,276 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-6] Entered userId != null && authentication == null
+2024-05-04 22:42:11,278 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-6] userDetails fetched internally:User(username=super-admin, password=$2a$10$A3GPM2.pFrD5LhJ5hrothugiRTf0zHH2DKcWtxtedERFIkJ4f7gkO, email=super.admin@email.com, address=128, Officer Colony, LMP, role=Role(id=3, name=SUPER_ADMIN, description=Super Administrator role, createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024), createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024)
+2024-05-04 22:42:11,278 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside isTokenValid with UserDetails:User(username=super-admin, password=$2a$10$A3GPM2.pFrD5LhJ5hrothugiRTf0zHH2DKcWtxtedERFIkJ4f7gkO, email=super.admin@email.com, address=128, Officer Colony, LMP, role=Role(id=3, name=SUPER_ADMIN, description=Super Administrator role, createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024), createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024)
+2024-05-04 22:42:11,278 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside extractUsername with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci1hZG1pbiIsImlhdCI6MTcxNDg0MjYwNCwiZXhwIjoxNzE0ODQ2MjA0fQ.UMgF-iqpfojk0WV3CmSbl0OzuvAyC9u_FJlOwQBPuaM
+2024-05-04 22:42:11,279 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci1hZG1pbiIsImlhdCI6MTcxNDg0MjYwNCwiZXhwIjoxNzE0ODQ2MjA0fQ.UMgF-iqpfojk0WV3CmSbl0OzuvAyC9u_FJlOwQBPuaM claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1684/0x00007f69c4824d10@25fc6044
+2024-05-04 22:42:11,279 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside extractAllClaims
+2024-05-04 22:42:11,279 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside getSignInKey
+2024-05-04 22:42:11,279 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Exiting extractUsername with extractedData:super-admin
+2024-05-04 22:42:11,280 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside isTokenExpired
+2024-05-04 22:42:11,280 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside extractExpiration
+2024-05-04 22:42:11,280 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci1hZG1pbiIsImlhdCI6MTcxNDg0MjYwNCwiZXhwIjoxNzE0ODQ2MjA0fQ.UMgF-iqpfojk0WV3CmSbl0OzuvAyC9u_FJlOwQBPuaM claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1685/0x00007f69c482c618@14bfdb9c
+2024-05-04 22:42:11,280 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside extractAllClaims
+2024-05-04 22:42:11,280 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside getSignInKey
+2024-05-04 22:42:11,280 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Expected username:super-admin IsTokenExpired:false
+2024-05-04 22:42:11,281 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside isTokenExpired
+2024-05-04 22:42:11,281 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside extractExpiration
+2024-05-04 22:42:11,281 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci1hZG1pbiIsImlhdCI6MTcxNDg0MjYwNCwiZXhwIjoxNzE0ODQ2MjA0fQ.UMgF-iqpfojk0WV3CmSbl0OzuvAyC9u_FJlOwQBPuaM claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1685/0x00007f69c482c618@14bfdb9c
+2024-05-04 22:42:11,281 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside extractAllClaims
+2024-05-04 22:42:11,281 INFO c.a.U.s.JwtService [http-nio-9889-exec-6] Inside getSignInKey
+2024-05-04 22:42:11,282 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-6] Inside getAllUsers
+2024-05-04 22:42:11,283 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-6] Entering getAllUsers
+2024-05-04 22:42:11,283 INFO c.a.U.s.KafkaPublisher [http-nio-9889-exec-6] Id:WTxYEjBNTQu7JJhBTnDfaw Entering publishJournalEntry
+2024-05-04 22:42:11,283 INFO c.a.U.s.KafkaPublisher [http-nio-9889-exec-6] Id:WTxYEjBNTQu7JJhBTnDfaw Exiting publishJournalEntry
+2024-05-04 22:42:11,287 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-6] Exiting getAllUsers
+2024-05-04 22:42:39,984 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-7] Inside doFilterInternal
+2024-05-04 22:42:39,985 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-7] Entering authenticate
+2024-05-04 22:42:39,985 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-7] Entering authenticate with LoginUserDto:LoginUserDto(username=d4461077-a4e8-4f72-a535-58f5f037d8ae, password=123456)
+2024-05-04 22:42:40,059 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-7] Exiting authenticate with Valid-User-Data:User(username=d4461077-a4e8-4f72-a535-58f5f037d8ae, password=$2a$10$7jeje28/YAUOP/p9OQefiuvRnRBEj6YDNvHeUcfPmE9wQ9oEWspmC, email=john_3@example.com, address=789 Main St, role=Role(id=2, name=ADMIN, description=Administrator role, createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024), createdAt=Sat May 04 22:40:18 IST 2024, updatedAt=Sat May 04 22:40:18 IST 2024)
+2024-05-04 22:42:40,060 INFO c.a.U.s.JwtService [http-nio-9889-exec-7] Inside generateToken-1Arg with UserDetails:User(username=d4461077-a4e8-4f72-a535-58f5f037d8ae, password=$2a$10$7jeje28/YAUOP/p9OQefiuvRnRBEj6YDNvHeUcfPmE9wQ9oEWspmC, email=john_3@example.com, address=789 Main St, role=Role(id=2, name=ADMIN, description=Administrator role, createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024), createdAt=Sat May 04 22:40:18 IST 2024, updatedAt=Sat May 04 22:40:18 IST 2024)
+2024-05-04 22:42:40,060 INFO c.a.U.s.JwtService [http-nio-9889-exec-7] Inside generateToken-2Arg with UserDetails:User(username=d4461077-a4e8-4f72-a535-58f5f037d8ae, password=$2a$10$7jeje28/YAUOP/p9OQefiuvRnRBEj6YDNvHeUcfPmE9wQ9oEWspmC, email=john_3@example.com, address=789 Main St, role=Role(id=2, name=ADMIN, description=Administrator role, createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024), createdAt=Sat May 04 22:40:18 IST 2024, updatedAt=Sat May 04 22:40:18 IST 2024)
+2024-05-04 22:42:40,060 INFO c.a.U.s.JwtService [http-nio-9889-exec-7] Inside buildToken
+2024-05-04 22:42:40,061 INFO c.a.U.s.JwtService [http-nio-9889-exec-7] Inside getSignInKey
+2024-05-04 22:42:40,062 INFO c.a.U.s.JwtService [http-nio-9889-exec-7] Inside getExpirationTime
+2024-05-04 22:42:40,062 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-7] Exiting authenticate
+2024-05-04 22:43:41,892 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-9] Inside doFilterInternal
+2024-05-04 22:43:41,893 INFO c.a.U.s.JwtService [http-nio-9889-exec-9] Inside extractUsername with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci1hZG1pbiIsImlhdCI6MTcxNDg0MjYwNCwiZXhwIjoxNzE0ODQ2MjA0fQ.UMgF-iqpfojk0WV3CmSbl0OzuvAyC9u_FJlOwQBPuaM
+2024-05-04 22:43:41,893 INFO c.a.U.s.JwtService [http-nio-9889-exec-9] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci1hZG1pbiIsImlhdCI6MTcxNDg0MjYwNCwiZXhwIjoxNzE0ODQ2MjA0fQ.UMgF-iqpfojk0WV3CmSbl0OzuvAyC9u_FJlOwQBPuaM claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1684/0x00007f69c4824d10@25fc6044
+2024-05-04 22:43:41,893 INFO c.a.U.s.JwtService [http-nio-9889-exec-9] Inside extractAllClaims
+2024-05-04 22:43:41,893 INFO c.a.U.s.JwtService [http-nio-9889-exec-9] Inside getSignInKey
+2024-05-04 22:43:41,894 INFO c.a.U.s.JwtService [http-nio-9889-exec-9] Exiting extractUsername with extractedData:super-admin
+2024-05-04 22:43:41,894 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-9] userId:super-admin jwt:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci1hZG1pbiIsImlhdCI6MTcxNDg0MjYwNCwiZXhwIjoxNzE0ODQ2MjA0fQ.UMgF-iqpfojk0WV3CmSbl0OzuvAyC9u_FJlOwQBPuaM
+2024-05-04 22:43:41,894 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-9] Authentication data:null
+2024-05-04 22:43:41,894 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-9] Entered userId != null && authentication == null
+2024-05-04 22:43:41,895 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-9] userDetails fetched internally:User(username=super-admin, password=$2a$10$A3GPM2.pFrD5LhJ5hrothugiRTf0zHH2DKcWtxtedERFIkJ4f7gkO, email=super.admin@email.com, address=128, Officer Colony, LMP, role=Role(id=3, name=SUPER_ADMIN, description=Super Administrator role, createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024), createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024)
+2024-05-04 22:43:41,896 INFO c.a.U.s.JwtService [http-nio-9889-exec-9] Inside isTokenValid with UserDetails:User(username=super-admin, password=$2a$10$A3GPM2.pFrD5LhJ5hrothugiRTf0zHH2DKcWtxtedERFIkJ4f7gkO, email=super.admin@email.com, address=128, Officer Colony, LMP, role=Role(id=3, name=SUPER_ADMIN, description=Super Administrator role, createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024), createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024)
+2024-05-04 22:43:41,896 INFO c.a.U.s.JwtService [http-nio-9889-exec-9] Inside extractUsername with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci1hZG1pbiIsImlhdCI6MTcxNDg0MjYwNCwiZXhwIjoxNzE0ODQ2MjA0fQ.UMgF-iqpfojk0WV3CmSbl0OzuvAyC9u_FJlOwQBPuaM
+2024-05-04 22:43:41,896 INFO c.a.U.s.JwtService [http-nio-9889-exec-9] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci1hZG1pbiIsImlhdCI6MTcxNDg0MjYwNCwiZXhwIjoxNzE0ODQ2MjA0fQ.UMgF-iqpfojk0WV3CmSbl0OzuvAyC9u_FJlOwQBPuaM claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1684/0x00007f69c4824d10@25fc6044
+2024-05-04 22:43:41,896 INFO c.a.U.s.JwtService [http-nio-9889-exec-9] Inside extractAllClaims
+2024-05-04 22:43:41,896 INFO c.a.U.s.JwtService [http-nio-9889-exec-9] Inside getSignInKey
+2024-05-04 22:43:41,897 INFO c.a.U.s.JwtService [http-nio-9889-exec-9] Exiting extractUsername with extractedData:super-admin
+2024-05-04 22:43:41,897 INFO c.a.U.s.JwtService [http-nio-9889-exec-9] Inside isTokenExpired
+2024-05-04 22:43:41,897 INFO c.a.U.s.JwtService [http-nio-9889-exec-9] Inside extractExpiration
+2024-05-04 22:43:41,897 INFO c.a.U.s.JwtService [http-nio-9889-exec-9] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci1hZG1pbiIsImlhdCI6MTcxNDg0MjYwNCwiZXhwIjoxNzE0ODQ2MjA0fQ.UMgF-iqpfojk0WV3CmSbl0OzuvAyC9u_FJlOwQBPuaM claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1685/0x00007f69c482c618@14bfdb9c
+2024-05-04 22:43:41,897 INFO c.a.U.s.JwtService [http-nio-9889-exec-9] Inside extractAllClaims
+2024-05-04 22:43:41,897 INFO c.a.U.s.JwtService [http-nio-9889-exec-9] Inside getSignInKey
+2024-05-04 22:43:41,898 INFO c.a.U.s.JwtService [http-nio-9889-exec-9] Expected username:super-admin IsTokenExpired:false
+2024-05-04 22:43:41,898 INFO c.a.U.s.JwtService [http-nio-9889-exec-9] Inside isTokenExpired
+2024-05-04 22:43:41,898 INFO c.a.U.s.JwtService [http-nio-9889-exec-9] Inside extractExpiration
+2024-05-04 22:43:41,898 INFO c.a.U.s.JwtService [http-nio-9889-exec-9] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci1hZG1pbiIsImlhdCI6MTcxNDg0MjYwNCwiZXhwIjoxNzE0ODQ2MjA0fQ.UMgF-iqpfojk0WV3CmSbl0OzuvAyC9u_FJlOwQBPuaM claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1685/0x00007f69c482c618@14bfdb9c
+2024-05-04 22:43:41,898 INFO c.a.U.s.JwtService [http-nio-9889-exec-9] Inside extractAllClaims
+2024-05-04 22:43:41,898 INFO c.a.U.s.JwtService [http-nio-9889-exec-9] Inside getSignInKey
+2024-05-04 22:43:47,120 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-2] Inside doFilterInternal
+2024-05-04 22:43:47,121 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-2] Entering authenticate
+2024-05-04 22:43:47,121 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-2] Entering authenticate with LoginUserDto:LoginUserDto(username=admin_001, password=123456)
+2024-05-04 22:43:47,201 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-2] Exiting authenticate with Valid-User-Data:User(username=admin_001, password=$2a$10$CVo3o9jSGD9qU4RvGiiFUOLfqmfHtqZpv6MVE8kd01Xo3bcT3a7NK, email=john_3@example.com, address=789 Main St, role=Role(id=2, name=ADMIN, description=Administrator role, createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024), createdAt=Sat May 04 22:43:41 IST 2024, updatedAt=Sat May 04 22:43:41 IST 2024)
+2024-05-04 22:43:47,201 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside generateToken-1Arg with UserDetails:User(username=admin_001, password=$2a$10$CVo3o9jSGD9qU4RvGiiFUOLfqmfHtqZpv6MVE8kd01Xo3bcT3a7NK, email=john_3@example.com, address=789 Main St, role=Role(id=2, name=ADMIN, description=Administrator role, createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024), createdAt=Sat May 04 22:43:41 IST 2024, updatedAt=Sat May 04 22:43:41 IST 2024)
+2024-05-04 22:43:47,202 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside generateToken-2Arg with UserDetails:User(username=admin_001, password=$2a$10$CVo3o9jSGD9qU4RvGiiFUOLfqmfHtqZpv6MVE8kd01Xo3bcT3a7NK, email=john_3@example.com, address=789 Main St, role=Role(id=2, name=ADMIN, description=Administrator role, createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024), createdAt=Sat May 04 22:43:41 IST 2024, updatedAt=Sat May 04 22:43:41 IST 2024)
+2024-05-04 22:43:47,202 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside buildToken
+2024-05-04 22:43:47,202 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside getSignInKey
+2024-05-04 22:43:47,203 INFO c.a.U.s.JwtService [http-nio-9889-exec-2] Inside getExpirationTime
+2024-05-04 22:43:47,203 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-2] Exiting authenticate
+2024-05-04 22:43:55,483 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-1] Inside doFilterInternal
+2024-05-04 22:43:55,483 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Inside extractUsername with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbl8wMDEiLCJpYXQiOjE3MTQ4NDI4MjcsImV4cCI6MTcxNDg0NjQyN30.c9CrRaTM-wpQwV0-s4Z_XE2htjYa7M5Ba9EDDUGxqcg
+2024-05-04 22:43:55,483 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbl8wMDEiLCJpYXQiOjE3MTQ4NDI4MjcsImV4cCI6MTcxNDg0NjQyN30.c9CrRaTM-wpQwV0-s4Z_XE2htjYa7M5Ba9EDDUGxqcg claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1684/0x00007f69c4824d10@25fc6044
+2024-05-04 22:43:55,483 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Inside extractAllClaims
+2024-05-04 22:43:55,483 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Inside getSignInKey
+2024-05-04 22:43:55,484 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Exiting extractUsername with extractedData:admin_001
+2024-05-04 22:43:55,484 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-1] userId:admin_001 jwt:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbl8wMDEiLCJpYXQiOjE3MTQ4NDI4MjcsImV4cCI6MTcxNDg0NjQyN30.c9CrRaTM-wpQwV0-s4Z_XE2htjYa7M5Ba9EDDUGxqcg
+2024-05-04 22:43:55,484 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-1] Authentication data:null
+2024-05-04 22:43:55,484 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-1] Entered userId != null && authentication == null
+2024-05-04 22:43:55,485 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-1] userDetails fetched internally:User(username=admin_001, password=$2a$10$CVo3o9jSGD9qU4RvGiiFUOLfqmfHtqZpv6MVE8kd01Xo3bcT3a7NK, email=john_3@example.com, address=789 Main St, role=Role(id=2, name=ADMIN, description=Administrator role, createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024), createdAt=Sat May 04 22:43:41 IST 2024, updatedAt=Sat May 04 22:43:41 IST 2024)
+2024-05-04 22:43:55,485 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Inside isTokenValid with UserDetails:User(username=admin_001, password=$2a$10$CVo3o9jSGD9qU4RvGiiFUOLfqmfHtqZpv6MVE8kd01Xo3bcT3a7NK, email=john_3@example.com, address=789 Main St, role=Role(id=2, name=ADMIN, description=Administrator role, createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024), createdAt=Sat May 04 22:43:41 IST 2024, updatedAt=Sat May 04 22:43:41 IST 2024)
+2024-05-04 22:43:55,485 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Inside extractUsername with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbl8wMDEiLCJpYXQiOjE3MTQ4NDI4MjcsImV4cCI6MTcxNDg0NjQyN30.c9CrRaTM-wpQwV0-s4Z_XE2htjYa7M5Ba9EDDUGxqcg
+2024-05-04 22:43:55,486 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbl8wMDEiLCJpYXQiOjE3MTQ4NDI4MjcsImV4cCI6MTcxNDg0NjQyN30.c9CrRaTM-wpQwV0-s4Z_XE2htjYa7M5Ba9EDDUGxqcg claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1684/0x00007f69c4824d10@25fc6044
+2024-05-04 22:43:55,486 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Inside extractAllClaims
+2024-05-04 22:43:55,486 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Inside getSignInKey
+2024-05-04 22:43:55,487 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Exiting extractUsername with extractedData:admin_001
+2024-05-04 22:43:55,487 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Inside isTokenExpired
+2024-05-04 22:43:55,487 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Inside extractExpiration
+2024-05-04 22:43:55,487 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbl8wMDEiLCJpYXQiOjE3MTQ4NDI4MjcsImV4cCI6MTcxNDg0NjQyN30.c9CrRaTM-wpQwV0-s4Z_XE2htjYa7M5Ba9EDDUGxqcg claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1685/0x00007f69c482c618@14bfdb9c
+2024-05-04 22:43:55,487 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Inside extractAllClaims
+2024-05-04 22:43:55,487 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Inside getSignInKey
+2024-05-04 22:43:55,488 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Expected username:admin_001 IsTokenExpired:false
+2024-05-04 22:43:55,488 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Inside isTokenExpired
+2024-05-04 22:43:55,488 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Inside extractExpiration
+2024-05-04 22:43:55,488 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbl8wMDEiLCJpYXQiOjE3MTQ4NDI4MjcsImV4cCI6MTcxNDg0NjQyN30.c9CrRaTM-wpQwV0-s4Z_XE2htjYa7M5Ba9EDDUGxqcg claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1685/0x00007f69c482c618@14bfdb9c
+2024-05-04 22:43:55,488 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Inside extractAllClaims
+2024-05-04 22:43:55,488 INFO c.a.U.s.JwtService [http-nio-9889-exec-1] Inside getSignInKey
+2024-05-04 22:43:55,489 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-1] Inside getAllUsers
+2024-05-04 22:43:55,489 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-1] Entering getAllUsers
+2024-05-04 22:43:55,490 INFO c.a.U.s.KafkaPublisher [http-nio-9889-exec-1] Id:OT9WSMQiRhWAfNuFmAR3NA Entering publishJournalEntry
+2024-05-04 22:43:55,490 INFO c.a.U.s.KafkaPublisher [http-nio-9889-exec-1] Id:OT9WSMQiRhWAfNuFmAR3NA Exiting publishJournalEntry
+2024-05-04 22:43:55,494 INFO c.a.U.s.UsrMngrServiceImpl [http-nio-9889-exec-1] Exiting getAllUsers
+2024-05-04 22:44:19,666 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-3] Inside doFilterInternal
+2024-05-04 22:44:19,666 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Inside extractUsername with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbl8wMDEiLCJpYXQiOjE3MTQ4NDI4MjcsImV4cCI6MTcxNDg0NjQyN30.c9CrRaTM-wpQwV0-s4Z_XE2htjYa7M5Ba9EDDUGxqcg
+2024-05-04 22:44:19,666 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbl8wMDEiLCJpYXQiOjE3MTQ4NDI4MjcsImV4cCI6MTcxNDg0NjQyN30.c9CrRaTM-wpQwV0-s4Z_XE2htjYa7M5Ba9EDDUGxqcg claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1684/0x00007f69c4824d10@25fc6044
+2024-05-04 22:44:19,666 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Inside extractAllClaims
+2024-05-04 22:44:19,666 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Inside getSignInKey
+2024-05-04 22:44:19,667 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Exiting extractUsername with extractedData:admin_001
+2024-05-04 22:44:19,667 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-3] userId:admin_001 jwt:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbl8wMDEiLCJpYXQiOjE3MTQ4NDI4MjcsImV4cCI6MTcxNDg0NjQyN30.c9CrRaTM-wpQwV0-s4Z_XE2htjYa7M5Ba9EDDUGxqcg
+2024-05-04 22:44:19,667 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-3] Authentication data:null
+2024-05-04 22:44:19,667 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-3] Entered userId != null && authentication == null
+2024-05-04 22:44:19,669 INFO c.a.U.c.s.JwtAuthenticationFilter [http-nio-9889-exec-3] userDetails fetched internally:User(username=admin_001, password=$2a$10$CVo3o9jSGD9qU4RvGiiFUOLfqmfHtqZpv6MVE8kd01Xo3bcT3a7NK, email=john_3@example.com, address=789 Main St, role=Role(id=2, name=ADMIN, description=Administrator role, createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024), createdAt=Sat May 04 22:43:41 IST 2024, updatedAt=Sat May 04 22:43:41 IST 2024)
+2024-05-04 22:44:19,669 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Inside isTokenValid with UserDetails:User(username=admin_001, password=$2a$10$CVo3o9jSGD9qU4RvGiiFUOLfqmfHtqZpv6MVE8kd01Xo3bcT3a7NK, email=john_3@example.com, address=789 Main St, role=Role(id=2, name=ADMIN, description=Administrator role, createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024), createdAt=Sat May 04 22:43:41 IST 2024, updatedAt=Sat May 04 22:43:41 IST 2024)
+2024-05-04 22:44:19,669 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Inside extractUsername with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbl8wMDEiLCJpYXQiOjE3MTQ4NDI4MjcsImV4cCI6MTcxNDg0NjQyN30.c9CrRaTM-wpQwV0-s4Z_XE2htjYa7M5Ba9EDDUGxqcg
+2024-05-04 22:44:19,669 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbl8wMDEiLCJpYXQiOjE3MTQ4NDI4MjcsImV4cCI6MTcxNDg0NjQyN30.c9CrRaTM-wpQwV0-s4Z_XE2htjYa7M5Ba9EDDUGxqcg claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1684/0x00007f69c4824d10@25fc6044
+2024-05-04 22:44:19,669 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Inside extractAllClaims
+2024-05-04 22:44:19,669 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Inside getSignInKey
+2024-05-04 22:44:19,670 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Exiting extractUsername with extractedData:admin_001
+2024-05-04 22:44:19,670 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Inside isTokenExpired
+2024-05-04 22:44:19,670 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Inside extractExpiration
+2024-05-04 22:44:19,670 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbl8wMDEiLCJpYXQiOjE3MTQ4NDI4MjcsImV4cCI6MTcxNDg0NjQyN30.c9CrRaTM-wpQwV0-s4Z_XE2htjYa7M5Ba9EDDUGxqcg claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1685/0x00007f69c482c618@14bfdb9c
+2024-05-04 22:44:19,670 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Inside extractAllClaims
+2024-05-04 22:44:19,670 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Inside getSignInKey
+2024-05-04 22:44:19,671 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Expected username:admin_001 IsTokenExpired:false
+2024-05-04 22:44:19,671 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Inside isTokenExpired
+2024-05-04 22:44:19,671 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Inside extractExpiration
+2024-05-04 22:44:19,671 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Inside extractClaim with token:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbl8wMDEiLCJpYXQiOjE3MTQ4NDI4MjcsImV4cCI6MTcxNDg0NjQyN30.c9CrRaTM-wpQwV0-s4Z_XE2htjYa7M5Ba9EDDUGxqcg claimsResolver:com.apica.UserMngService.service.JwtService$$Lambda$1685/0x00007f69c482c618@14bfdb9c
+2024-05-04 22:44:19,671 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Inside extractAllClaims
+2024-05-04 22:44:19,671 INFO c.a.U.s.JwtService [http-nio-9889-exec-3] Inside getSignInKey
+2024-05-04 22:44:19,672 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-3] Entering getCurrentUser
+2024-05-04 22:44:19,672 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-3] Authentication data:UsernamePasswordAuthenticationToken [Principal=User(username=admin_001, password=$2a$10$CVo3o9jSGD9qU4RvGiiFUOLfqmfHtqZpv6MVE8kd01Xo3bcT3a7NK, email=john_3@example.com, address=789 Main St, role=Role(id=2, name=ADMIN, description=Administrator role, createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024), createdAt=Sat May 04 22:43:41 IST 2024, updatedAt=Sat May 04 22:43:41 IST 2024), Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN]]
+2024-05-04 22:44:19,672 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-3] authentication.getPrincipal():User(username=admin_001, password=$2a$10$CVo3o9jSGD9qU4RvGiiFUOLfqmfHtqZpv6MVE8kd01Xo3bcT3a7NK, email=john_3@example.com, address=789 Main St, role=Role(id=2, name=ADMIN, description=Administrator role, createdAt=Sat May 04 22:38:25 IST 2024, updatedAt=Sat May 04 22:38:25 IST 2024), createdAt=Sat May 04 22:43:41 IST 2024, updatedAt=Sat May 04 22:43:41 IST 2024)
+2024-05-04 22:44:19,672 INFO c.a.U.c.UsrMngrController [http-nio-9889-exec-3] Exiting getCurrentUser
