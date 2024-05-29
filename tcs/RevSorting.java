@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -10,7 +11,8 @@ public class RevSorting{
         List<Integer> list = Arrays
             .stream(givenNo)
             .boxed()
-            .sorted((a, b) -> b - a)
+            //.sorted((a, b) -> b - a)
+            .sorted(Comparator.reverseOrder())
             .collect(Collectors.toList());
 
         list.forEach(x -> {
